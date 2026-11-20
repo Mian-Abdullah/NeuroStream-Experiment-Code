@@ -1,0 +1,107 @@
+{
+ "retrieved": "2026-11-19",
+ "mirrors": {
+  "streaming": [
+   "https://github.com/scikit-multiflow/streaming-datasets",
+   "f1eb9f068c3450233721c3beac6fb0e880e9e7d7"
+  ],
+  "cmapss": [
+   "https://github.com/edwardzjl/CMAPSSData",
+   "ed40e40e38f95fcfb84a8f48972a3f22a46fbb1d"
+  ]
+ },
+ "files": {
+  "airlines.csv": {
+   "bytes": 14210070,
+   "sha256": "0bbf1719c7a5c82a1144723c0bdb6d7f563118057e5f979a3c34f824fb40b980"
+  },
+  "covtype.csv": {
+   "bytes": 75170064,
+   "sha256": "ea35ca6820fcbe0bdc6707e9ed31e11a9de84f07d88da73b511c737383c271a6"
+  },
+  "elec.csv": {
+   "bytes": 3200586,
+   "sha256": "cdf901433885f29eca6911f70c0eeafb50d90596c879c30c5b99f5a2e8e734ff"
+  },
+  "cmapss/RUL_FD001.txt": {
+   "bytes": 429,
+   "sha256": "a19c8ec94931949d0485bdc35118206e9c81c4547b422efb9cf86f4ceddbceca"
+  },
+  "cmapss/RUL_FD002.txt": {
+   "bytes": 1110,
+   "sha256": "c851dd96a6ea6998d3c4a8f834d3c8013aa90e93a6ed950dc826ad0655b2906b"
+  },
+  "cmapss/RUL_FD003.txt": {
+   "bytes": 428,
+   "sha256": "df1e0566306b174a2de41c67a3e7a51877889598b78643fc3e5685259091b7cb"
+  },
+  "cmapss/RUL_FD004.txt": {
+   "bytes": 1084,
+   "sha256": "196b836b85a95ac7fdbbf29c5fdf1657382eafa445644d114ffaaf50dc2975e1"
+  },
+  "cmapss/readme.txt": {
+   "bytes": 2442,
+   "sha256": "4f5270554b775c67e73aff383c5436fd329d6e4cc3d3a116913276fae511269b"
+  },
+  "cmapss/test_FD001.txt": {
+   "bytes": 2228855,
+   "sha256": "3cda7109ce17bafb5443f2ac926cfcf88154b941b8c4cf95eb55d1ddd6f52851"
+  },
+  "cmapss/test_FD002.txt": {
+   "bytes": 5734587,
+   "sha256": "de7b5bf7e998a985c378488480528b7c02cff1406a46740def362dda8d9b4e02"
+  },
+  "cmapss/test_FD003.txt": {
+   "bytes": 2826651,
+   "sha256": "299babd63c8d987cef079c4a425429f33b3a34797d803bbe2ad48c29dbd0d790"
+  },
+  "cmapss/test_FD004.txt": {
+   "bytes": 6957759,
+   "sha256": "1dc675fff0624bac10786927c6715b37d1297657137400d2b1a3138d777a3ba5"
+  },
+  "cmapss/train_FD001.txt": {
+   "bytes": 3515356,
+   "sha256": "963b5e22825b34d8b21c69e1aeb4af3e647050eb672ee8834ba4b5d91d2de0f8"
+  },
+  "cmapss/train_FD002.txt": {
+   "bytes": 9082480,
+   "sha256": "dac6c4dbc4e7c1bdeb5747da3d313d05c395bb99801b44a002b26a2ba13d788f"
+  },
+  "cmapss/train_FD003.txt": {
+   "bytes": 4213862,
+   "sha256": "2abbe9968cc5e8eb091980f51b20f62bb4127336d3482cb52071d53bf23329e2"
+  },
+  "cmapss/train_FD004.txt": {
+   "bytes": 10350705,
+   "sha256": "27ef6160b6a1dcb2613a88de9c239f763b223f02cdc41dc5cdedc5dc189b6218"
+  }
+ },
+ "datasets": {
+  "elec": {
+   "rows": 45312,
+   "features_used": 6,
+   "classes": 2
+  },
+  "covtype": {
+   "rows": 581012,
+   "features_used": 54,
+   "classes": 7
+  },
+  "airlines": {
+   "rows": 539383,
+   "features_used": 27,
+   "classes": 2
+  },
+  "cmapss_FD002": {
+   "rows": 53759,
+   "columns": 26,
+   "engines": 260
+  },
+  "cmapss_FD004": {
+   "rows": 61249,
+   "columns": 26,
+   "engines": 249
+  }
+ },
+ "cmapss_all_12_files_bytes": 44913306
+}

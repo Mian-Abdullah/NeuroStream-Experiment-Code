@@ -1,0 +1,6798 @@
+{
+ "name": "K_400",
+ "config": {
+  "K": 400,
+  "B": 1200,
+  "t0": 600,
+  "C": 3,
+  "NB": 5000,
+  "MB": 10,
+  "SX": 0.25,
+  "MAG": 0.03,
+  "W": 10,
+  "LF": 20,
+  "LO": 20,
+  "lam_f": 0.001,
+  "lam_o": 0.004,
+  "frac_out": 0.5,
+  "hit_p": 0.9,
+  "frac_drift": 0.5,
+  "drift_mag": 1.0,
+  "dprime": 0.002,
+  "z_sd": 0.03,
+  "z_obs": 1.0,
+  "nonlinear": false,
+  "spoof_feed": false,
+  "weights": "volume",
+  "r_local": 3,
+  "calib_end": 300,
+  "horizon": 60,
+  "zmax": 1.5
+ },
+ "kwargs": {
+  "thetas": [
+   0.25,
+   0.35,
+   0.45
+  ]
+ },
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61,
+  62,
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  82,
+  83,
+  84,
+  85,
+  86,
+  87,
+  88,
+  89,
+  90,
+  91,
+  92,
+  93,
+  94,
+  95,
+  96,
+  97,
+  98,
+  99
+ ],
+ "config_hash": "3b06b263d84d",
+ "versions": {
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "dp-accounting": "0.7.0",
+  "river": "0.27.0",
+  "pandas": "3.0.5",
+  "matplotlib": "3.11.2"
+ },
+ "runtime_s": 25.1,
+ "summary": {
+  "k_eff": {
+   "mean": 313.15012512047764,
+   "ci95": [
+    311.88990043842153,
+    314.36262240231366
+   ],
+   "n": 100
+  },
+  "p_hat_raw": {
+   "mean": 0.10492741379310344,
+   "ci95": [
+    0.09781154202586208,
+    0.11191895581896551
+   ],
+   "n": 100
+  },
+  "p_hat_filtered": {
+   "mean": 0.040513491379310346,
+   "ci95": [
+    0.04001040193965517,
+    0.04102379310344827
+   ],
+   "n": 100
+  },
+  "local_scope_per_1000": {
+   "mean": 875.9482758620692,
+   "ci95": [
+    816.1754310344827,
+    935.5706896551723
+   ],
+   "n": 100
+  },
+  "filter_releases_per_node": {
+   "mean": 102.40285000000003,
+   "ci95": [
+    94.281329375,
+    110.50317874999999
+   ],
+   "n": 100
+  },
+  "methods": {
+   "local": {
+    "wasted_node_retrains_per_1000": {
+     "mean": 2005.810344827586,
+     "ci95": [
+      1867.4793103448274,
+      2142.1267241379305
+     ],
+     "n": 100
+    },
+    "node_detect_frac": {
+     "mean": 0.9895999999999999,
+     "ci95": [
+      0.9829000000000001,
+      0.99470125
+     ],
+     "n": 100
+    }
+   },
+   "local+filter": {
+    "wasted_node_retrains_per_1000": {
+     "mean": 792.2068965517241,
+     "ci95": [
+      782.4461206896553,
+      801.7431034482757
+     ],
+     "n": 100
+    },
+    "node_detect_frac": {
+     "mean": 0.9777499999999999,
+     "ci95": [
+      0.9598,
+      0.99175
+     ],
+     "n": 100
+    }
+   },
+   "FDC@0.25": {
+    "false_episodes_per_1000": {
+     "mean": 3.3620689655172407,
+     "ci95": [
+      2.99956896551724,
+      3.7418103448275835
+     ],
+     "n": 100,
+     "total_events": 195,
+     "exposure_thousand_blocks": 58.0,
+     "poisson_ucb95": 3.785901685494145
+    },
+    "wasted_node_retrains_per_1000": {
+     "mean": 1344.8275862068967,
+     "ci95": [
+      1199.8275862068965,
+      1496.7241379310342
+     ],
+     "n": 100
+    },
+    "attributable_detection": {
+     "rate": 0.86,
+     "k": 86,
+     "n": 100,
+     "ci95": [
+      0.7786281178903616,
+      0.9147365634006086
+     ]
+    },
+    "delay_median": 2.0,
+    "delay_iqr": [
+     2.0,
+     2.0
+    ],
+    "raw_detection": {
+     "rate": 1.0,
+     "k": 100,
+     "n": 100,
+     "ci95": [
+      0.9630065017930143,
+      1.0
+     ]
+    }
+   },
+   "FDC+filter@0.25": {
+    "false_episodes_per_1000": {
+     "mean": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 100,
+     "total_events": 0,
+     "exposure_thousand_blocks": 58.0,
+     "poisson_ucb95": 0.051650556440586026
+    },
+    "wasted_node_retrains_per_1000": {
+     "mean": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 100
+    },
+    "attributable_detection": {
+     "rate": 1.0,
+     "k": 100,
+     "n": 100,
+     "ci95": [
+      0.9630065017930143,
+      1.0
+     ]
+    },
+    "delay_median": 3.0,
+    "delay_iqr": [
+     2.0,
+     3.0
+    ],
+    "raw_detection": {
+     "rate": 1.0,
+     "k": 100,
+     "n": 100,
+     "ci95": [
+      0.9630065017930143,
+      1.0
+     ]
+    }
+   },
+   "FDC@0.35": {
+    "false_episodes_per_1000": {
+     "mean": 3.3620689655172407,
+     "ci95": [
+      2.99956896551724,
+      3.7418103448275835
+     ],
+     "n": 100,
+     "total_events": 195,
+     "exposure_thousand_blocks": 58.0,
+     "poisson_ucb95": 3.785901685494145
+    },
+    "wasted_node_retrains_per_1000": {
+     "mean": 1344.8275862068967,
+     "ci95": [
+      1199.8275862068965,
+      1496.7241379310342
+     ],
+     "n": 100
+    },
+    "attributable_detection": {
+     "rate": 0.87,
+     "k": 87,
+     "n": 100,
+     "ci95": [
+      0.7901964855992357,
+      0.9224283257275948
+     ]
+    },
+    "delay_median": 3.0,
+    "delay_iqr": [
+     3.0,
+     3.0
+    ],
+    "raw_detection": {
+     "rate": 1.0,
+     "k": 100,
+     "n": 100,
+     "ci95": [
+      0.9630065017930143,
+      1.0
+     ]
+    }
+   },
+   "FDC+filter@0.35": {
+    "false_episodes_per_1000": {
+     "mean": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 100,
+     "total_events": 0,
+     "exposure_thousand_blocks": 58.0,
+     "poisson_ucb95": 0.051650556440586026
+    },
+    "wasted_node_retrains_per_1000": {
+     "mean": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 100
+    },
+    "attributable_detection": {
+     "rate": 0.96,
+     "k": 96,
+     "n": 100,
+     "ci95": [
+      0.9016292856411208,
+      0.9843366960084523
+     ]
+    },
+    "delay_median": 3.0,
+    "delay_iqr": [
+     3.0,
+     3.0
+    ],
+    "raw_detection": {
+     "rate": 0.96,
+     "k": 96,
+     "n": 100,
+     "ci95": [
+      0.9016292856411208,
+      0.9843366960084523
+     ]
+    }
+   },
+   "FDC@0.45": {
+    "false_episodes_per_1000": {
+     "mean": 3.327586206896551,
+     "ci95": [
+      2.9482758620689653,
+      3.7241379310344827
+     ],
+     "n": 100,
+     "total_events": 193,
+     "exposure_thousand_blocks": 58.0,
+     "poisson_ucb95": 3.7493867819372704
+    },
+    "wasted_node_retrains_per_1000": {
+     "mean": 1331.034482758621,
+     "ci95": [
+      1179.3103448275863,
+      1489.6551724137937
+     ],
+     "n": 100
+    },
+    "attributable_detection": {
+     "rate": 0.89,
+     "k": 89,
+     "n": 100,
+     "ci95": [
+      0.8136870349691969,
+      0.9374580364293543
+     ]
+    },
+    "delay_median": 3.0,
+    "delay_iqr": [
+     3.0,
+     3.0
+    ],
+    "raw_detection": {
+     "rate": 1.0,
+     "k": 100,
+     "n": 100,
+     "ci95": [
+      0.9630065017930143,
+      1.0
+     ]
+    }
+   },
+   "FDC+filter@0.45": {
+    "false_episodes_per_1000": {
+     "mean": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 100,
+     "total_events": 0,
+     "exposure_thousand_blocks": 58.0,
+     "poisson_ucb95": 0.051650556440586026
+    },
+    "wasted_node_retrains_per_1000": {
+     "mean": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 100
+    },
+    "attributable_detection": {
+     "rate": 0.96,
+     "k": 96,
+     "n": 100,
+     "ci95": [
+      0.9016292856411208,
+      0.9843366960084523
+     ]
+    },
+    "delay_median": 3.0,
+    "delay_iqr": [
+     3.0,
+     3.0
+    ],
+    "raw_detection": {
+     "rate": 0.96,
+     "k": 96,
+     "n": 100,
+     "ci95": [
+      0.9016292856411208,
+      0.9843366960084523
+     ]
+    }
+   }
+  }
+ },
+ "per_seed": [
+  {
+   "seed": 0,
+   "k_eff": 320.5549170491203,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1466,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 436,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.13601293103448275,
+   "p_hat_filtered": 0.037439655172413794,
+   "local_scope_episodes": 696,
+   "filter_releases_mean": 98.7275
+  },
+  {
+   "seed": 1,
+   "k_eff": 312.1976204556502,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 995,
+     "node_detect_frac": 0.75
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 485,
+     "node_detect_frac": 0.555
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 25,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": false,
+     "delay": null,
+     "detected_raw": false
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 25,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": false,
+     "delay": null,
+     "detected_raw": false
+    }
+   },
+   "p_hat_raw": 0.08958620689655172,
+   "p_hat_filtered": 0.04361206896551724,
+   "local_scope_episodes": 394,
+   "filter_releases_mean": 50.4325
+  },
+  {
+   "seed": 2,
+   "k_eff": 315.19533981751863,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 788,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 445,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07325,
+   "p_hat_filtered": 0.04035344827586207,
+   "local_scope_episodes": 379,
+   "filter_releases_mean": 97.2225
+  },
+  {
+   "seed": 3,
+   "k_eff": 302.95976758605804,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 800,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 465,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07444827586206897,
+   "p_hat_filtered": 0.04220258620689655,
+   "local_scope_episodes": 383,
+   "filter_releases_mean": 23.835
+  },
+  {
+   "seed": 4,
+   "k_eff": 318.15103862940435,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 778,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 441,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07261637931034483,
+   "p_hat_filtered": 0.04003448275862069,
+   "local_scope_episodes": 372,
+   "filter_releases_mean": 49.445
+  },
+  {
+   "seed": 5,
+   "k_eff": 320.3603999949908,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1533,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 456,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.12180172413793103,
+   "p_hat_filtered": 0.03949568965517242,
+   "local_scope_episodes": 555,
+   "filter_releases_mean": 109.9225
+  },
+  {
+   "seed": 6,
+   "k_eff": 309.1149528992399,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1135,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 437,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10459051724137931,
+   "p_hat_filtered": 0.03796551724137931,
+   "local_scope_episodes": 540,
+   "filter_releases_mean": 75.585
+  },
+  {
+   "seed": 7,
+   "k_eff": 315.67637334924797,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 435,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 437,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.039616379310344826,
+   "p_hat_filtered": 0.03905172413793104,
+   "local_scope_episodes": 205,
+   "filter_releases_mean": 98.0475
+  },
+  {
+   "seed": 8,
+   "k_eff": 316.5651241762904,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1134,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 442,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10486206896551724,
+   "p_hat_filtered": 0.03878448275862069,
+   "local_scope_episodes": 545,
+   "filter_releases_mean": 73.4925
+  },
+  {
+   "seed": 9,
+   "k_eff": 305.3818461311632,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 460,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 461,
+     "node_detect_frac": 0.985
+    },
+    "FDC@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.04182758620689655,
+   "p_hat_filtered": 0.0414051724137931,
+   "local_scope_episodes": 221,
+   "filter_releases_mean": 115.0025
+  },
+  {
+   "seed": 10,
+   "k_eff": 305.0624705788267,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1480,
+     "node_detect_frac": 0.89
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 433,
+     "node_detect_frac": 0.545
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": false,
+     "delay": null,
+     "detected_raw": false
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": false,
+     "delay": null,
+     "detected_raw": false
+    }
+   },
+   "p_hat_raw": 0.1372241379310345,
+   "p_hat_filtered": 0.037672413793103446,
+   "local_scope_episodes": 711,
+   "filter_releases_mean": 127.03
+  },
+  {
+   "seed": 11,
+   "k_eff": 321.1929191101743,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1435,
+     "node_detect_frac": 0.98
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 497,
+     "node_detect_frac": 0.985
+    },
+    "FDC@0.25": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 5,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.12142241379310345,
+   "p_hat_filtered": 0.04287931034482759,
+   "local_scope_episodes": 416,
+   "filter_releases_mean": 184.0775
+  },
+  {
+   "seed": 12,
+   "k_eff": 314.3034488819002,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1510,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 450,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.14349137931034484,
+   "p_hat_filtered": 0.03909051724137931,
+   "local_scope_episodes": 586,
+   "filter_releases_mean": 136.595
+  },
+  {
+   "seed": 13,
+   "k_eff": 314.6831581600027,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 2270,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 479,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.18150431034482759,
+   "p_hat_filtered": 0.04114224137931034,
+   "local_scope_episodes": 792,
+   "filter_releases_mean": 153.3175
+  },
+  {
+   "seed": 14,
+   "k_eff": 319.38767122288317,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1159,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 477,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10739655172413794,
+   "p_hat_filtered": 0.042107758620689655,
+   "local_scope_episodes": 555,
+   "filter_releases_mean": 102.66
+  },
+  {
+   "seed": 15,
+   "k_eff": 306.975344454459,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1141,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 463,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10581896551724138,
+   "p_hat_filtered": 0.040987068965517244,
+   "local_scope_episodes": 552,
+   "filter_releases_mean": 122.41
+  },
+  {
+   "seed": 16,
+   "k_eff": 314.70893852461364,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1122,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 426,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10407758620689656,
+   "p_hat_filtered": 0.037512931034482756,
+   "local_scope_episodes": 542,
+   "filter_releases_mean": 99.625
+  },
+  {
+   "seed": 17,
+   "k_eff": 301.1622999915357,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1184,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 498,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10943103448275862,
+   "p_hat_filtered": 0.04397413793103448,
+   "local_scope_episodes": 565,
+   "filter_releases_mean": 75.1275
+  },
+  {
+   "seed": 18,
+   "k_eff": 305.66513288512715,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1539,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 504,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.14381896551724138,
+   "p_hat_filtered": 0.04368965517241379,
+   "local_scope_episodes": 737,
+   "filter_releases_mean": 145.3075
+  },
+  {
+   "seed": 19,
+   "k_eff": 306.9230318904713,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1848,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 465,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.17204310344827586,
+   "p_hat_filtered": 0.04020689655172414,
+   "local_scope_episodes": 884,
+   "filter_releases_mean": 126.685
+  },
+  {
+   "seed": 20,
+   "k_eff": 302.2126784269879,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1204,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 454,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.11582758620689655,
+   "p_hat_filtered": 0.04001293103448276,
+   "local_scope_episodes": 402,
+   "filter_releases_mean": 99.0725
+  },
+  {
+   "seed": 21,
+   "k_eff": 317.1132424069703,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1902,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 474,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 5,
+     "wasted_node_retrains": 2000,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 5,
+     "wasted_node_retrains": 2000,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 5,
+     "wasted_node_retrains": 2000,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.18064655172413793,
+   "p_hat_filtered": 0.040043103448275864,
+   "local_scope_episodes": 671,
+   "filter_releases_mean": 184.445
+  },
+  {
+   "seed": 22,
+   "k_eff": 306.82234606142583,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 762,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 444,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07065948275862069,
+   "p_hat_filtered": 0.03880603448275862,
+   "local_scope_episodes": 366,
+   "filter_releases_mean": 24.3825
+  },
+  {
+   "seed": 23,
+   "k_eff": 319.39675545535175,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1258,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 376,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10997413793103449,
+   "p_hat_filtered": 0.03331465517241379,
+   "local_scope_episodes": 519,
+   "filter_releases_mean": 141.2775
+  },
+  {
+   "seed": 24,
+   "k_eff": 314.9169016707142,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1138,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 439,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.1057844827586207,
+   "p_hat_filtered": 0.03952155172413793,
+   "local_scope_episodes": 546,
+   "filter_releases_mean": 73.1825
+  },
+  {
+   "seed": 25,
+   "k_eff": 308.7916395579583,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1817,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 455,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.15941810344827587,
+   "p_hat_filtered": 0.03949568965517242,
+   "local_scope_episodes": 884,
+   "filter_releases_mean": 93.2325
+  },
+  {
+   "seed": 26,
+   "k_eff": 315.3882337769087,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1146,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 468,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10753879310344827,
+   "p_hat_filtered": 0.041681034482758623,
+   "local_scope_episodes": 551,
+   "filter_releases_mean": 100.615
+  },
+  {
+   "seed": 27,
+   "k_eff": 317.5657992609728,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 791,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 462,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07324137931034483,
+   "p_hat_filtered": 0.0414051724137931,
+   "local_scope_episodes": 373,
+   "filter_releases_mean": 144.925
+  },
+  {
+   "seed": 28,
+   "k_eff": 299.7419415863099,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1174,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 495,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10941810344827586,
+   "p_hat_filtered": 0.04384913793103448,
+   "local_scope_episodes": 556,
+   "filter_releases_mean": 77.1175
+  },
+  {
+   "seed": 29,
+   "k_eff": 314.7125669387824,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 752,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 409,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.0698146551724138,
+   "p_hat_filtered": 0.03657327586206897,
+   "local_scope_episodes": 363,
+   "filter_releases_mean": 114.89
+  },
+  {
+   "seed": 30,
+   "k_eff": 311.68845542865876,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 793,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 445,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07313793103448275,
+   "p_hat_filtered": 0.03958620689655173,
+   "local_scope_episodes": 378,
+   "filter_releases_mean": 74.5175
+  },
+  {
+   "seed": 31,
+   "k_eff": 311.8907328701103,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1029,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 510,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 5,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 6,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.08231896551724138,
+   "p_hat_filtered": 0.045625,
+   "local_scope_episodes": 411,
+   "filter_releases_mean": 75.5725
+  },
+  {
+   "seed": 32,
+   "k_eff": 318.8169155742072,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 823,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 489,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07581896551724138,
+   "p_hat_filtered": 0.04321551724137931,
+   "local_scope_episodes": 391,
+   "filter_releases_mean": 72.7975
+  },
+  {
+   "seed": 33,
+   "k_eff": 311.3280156272833,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 828,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 468,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.0764051724137931,
+   "p_hat_filtered": 0.041681034482758623,
+   "local_scope_episodes": 396,
+   "filter_releases_mean": 71.91
+  },
+  {
+   "seed": 34,
+   "k_eff": 319.57618434966366,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 479,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 480,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.04387931034482759,
+   "p_hat_filtered": 0.04343965517241379,
+   "local_scope_episodes": 224,
+   "filter_releases_mean": 0.0
+  },
+  {
+   "seed": 35,
+   "k_eff": 325.1169459526939,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 604,
+     "node_detect_frac": 0.885
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 438,
+     "node_detect_frac": 0.565
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": false,
+     "delay": null,
+     "detected_raw": false
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 1,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": false,
+     "delay": null,
+     "detected_raw": false
+    }
+   },
+   "p_hat_raw": 0.05200862068965517,
+   "p_hat_filtered": 0.03934051724137931,
+   "local_scope_episodes": 207,
+   "filter_releases_mean": 49.48
+  },
+  {
+   "seed": 36,
+   "k_eff": 313.33518882839644,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1204,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 486,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.11133189655172414,
+   "p_hat_filtered": 0.04283189655172414,
+   "local_scope_episodes": 572,
+   "filter_releases_mean": 77.395
+  },
+  {
+   "seed": 37,
+   "k_eff": 310.3983897620982,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 485,
+     "node_detect_frac": 0.985
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 485,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.044461206896551725,
+   "p_hat_filtered": 0.04395258620689655,
+   "local_scope_episodes": 230,
+   "filter_releases_mean": 96.0525
+  },
+  {
+   "seed": 38,
+   "k_eff": 317.35866775743324,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1166,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 468,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10805172413793103,
+   "p_hat_filtered": 0.04186637931034483,
+   "local_scope_episodes": 562,
+   "filter_releases_mean": 49.9825
+  },
+  {
+   "seed": 39,
+   "k_eff": 312.60542274028955,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1483,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 428,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.13755172413793104,
+   "p_hat_filtered": 0.03738362068965517,
+   "local_scope_episodes": 717,
+   "filter_releases_mean": 149.2375
+  },
+  {
+   "seed": 40,
+   "k_eff": 318.56164757571804,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1862,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 476,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 5,
+     "wasted_node_retrains": 2000,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.17536637931034482,
+   "p_hat_filtered": 0.03998275862068965,
+   "local_scope_episodes": 748,
+   "filter_releases_mean": 132.4275
+  },
+  {
+   "seed": 41,
+   "k_eff": 308.269544667366,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 786,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 436,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 12,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 11,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 11,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.06418103448275862,
+   "p_hat_filtered": 0.03934051724137931,
+   "local_scope_episodes": 388,
+   "filter_releases_mean": 103.1025
+  },
+  {
+   "seed": 42,
+   "k_eff": 316.0143114726712,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 597,
+     "node_detect_frac": 0.87
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 420,
+     "node_detect_frac": 0.545
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": false,
+     "delay": null,
+     "detected_raw": false
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": false,
+     "delay": null,
+     "detected_raw": false
+    }
+   },
+   "p_hat_raw": 0.051443965517241376,
+   "p_hat_filtered": 0.03807758620689655,
+   "local_scope_episodes": 199,
+   "filter_releases_mean": 26.2275
+  },
+  {
+   "seed": 43,
+   "k_eff": 311.89049872498634,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1867,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 474,
+     "node_detect_frac": 0.985
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.17432327586206897,
+   "p_hat_filtered": 0.04192241379310345,
+   "local_scope_episodes": 901,
+   "filter_releases_mean": 224.3675
+  },
+  {
+   "seed": 44,
+   "k_eff": 301.6866804710493,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 860,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 534,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07882327586206897,
+   "p_hat_filtered": 0.04707327586206896,
+   "local_scope_episodes": 402,
+   "filter_releases_mean": 103.0775
+  },
+  {
+   "seed": 45,
+   "k_eff": 318.78734647981025,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1164,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 494,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10793103448275862,
+   "p_hat_filtered": 0.04389655172413793,
+   "local_scope_episodes": 563,
+   "filter_releases_mean": 154.855
+  },
+  {
+   "seed": 46,
+   "k_eff": 313.9618309483369,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1114,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 431,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10257327586206896,
+   "p_hat_filtered": 0.037206896551724135,
+   "local_scope_episodes": 527,
+   "filter_releases_mean": 74.905
+  },
+  {
+   "seed": 47,
+   "k_eff": 321.0710115584392,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1463,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 464,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.12466810344827586,
+   "p_hat_filtered": 0.040202586206896554,
+   "local_scope_episodes": 550,
+   "filter_releases_mean": 174.605
+  },
+  {
+   "seed": 48,
+   "k_eff": 316.0726131761945,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 755,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 418,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.06966379310344828,
+   "p_hat_filtered": 0.03712931034482759,
+   "local_scope_episodes": 369,
+   "filter_releases_mean": 127.5525
+  },
+  {
+   "seed": 49,
+   "k_eff": 308.04748724099073,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1297,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 456,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.1219396551724138,
+   "p_hat_filtered": 0.040008620689655175,
+   "local_scope_episodes": 548,
+   "filter_releases_mean": 88.935
+  },
+  {
+   "seed": 50,
+   "k_eff": 303.2714098741815,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 780,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 455,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07232758620689655,
+   "p_hat_filtered": 0.040275862068965516,
+   "local_scope_episodes": 373,
+   "filter_releases_mean": 74.725
+  },
+  {
+   "seed": 51,
+   "k_eff": 320.8850961366856,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 429,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 429,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.03920689655172414,
+   "p_hat_filtered": 0.03876293103448276,
+   "local_scope_episodes": 204,
+   "filter_releases_mean": 54.3025
+  },
+  {
+   "seed": 52,
+   "k_eff": 313.19429938490697,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1488,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 459,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 11,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 10,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 10,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.13062931034482758,
+   "p_hat_filtered": 0.04048275862068965,
+   "local_scope_episodes": 725,
+   "filter_releases_mean": 99.8
+  },
+  {
+   "seed": 53,
+   "k_eff": 320.3186007273871,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1465,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 448,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.1366939655172414,
+   "p_hat_filtered": 0.03830172413793104,
+   "local_scope_episodes": 702,
+   "filter_releases_mean": 124.21
+  },
+  {
+   "seed": 54,
+   "k_eff": 296.21899911809805,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1127,
+     "node_detect_frac": 0.98
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 466,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 5,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 18,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 6,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.09152155172413794,
+   "p_hat_filtered": 0.04141810344827586,
+   "local_scope_episodes": 379,
+   "filter_releases_mean": 120.025
+  },
+  {
+   "seed": 55,
+   "k_eff": 323.661546744775,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1285,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 514,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.11795258620689655,
+   "p_hat_filtered": 0.044780172413793104,
+   "local_scope_episodes": 456,
+   "filter_releases_mean": 81.7025
+  },
+  {
+   "seed": 56,
+   "k_eff": 313.9741710077284,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1602,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 466,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.14713793103448275,
+   "p_hat_filtered": 0.04077155172413793,
+   "local_scope_episodes": 614,
+   "filter_releases_mean": 187.2475
+  },
+  {
+   "seed": 57,
+   "k_eff": 321.25363130436597,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1137,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 462,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.1065301724137931,
+   "p_hat_filtered": 0.040948275862068964,
+   "local_scope_episodes": 546,
+   "filter_releases_mean": 59.96
+  },
+  {
+   "seed": 58,
+   "k_eff": 310.7234615851206,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1088,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 425,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 10,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 9,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 9,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.09420258620689655,
+   "p_hat_filtered": 0.03762931034482759,
+   "local_scope_episodes": 524,
+   "filter_releases_mean": 98.5575
+  },
+  {
+   "seed": 59,
+   "k_eff": 311.196269941811,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1726,
+     "node_detect_frac": 0.985
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 488,
+     "node_detect_frac": 0.95
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 8,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.14488793103448275,
+   "p_hat_filtered": 0.042913793103448276,
+   "local_scope_episodes": 739,
+   "filter_releases_mean": 126.0975
+  },
+  {
+   "seed": 60,
+   "k_eff": 326.5668757785997,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1830,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 481,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.1699396551724138,
+   "p_hat_filtered": 0.04047844827586207,
+   "local_scope_episodes": 810,
+   "filter_releases_mean": 97.1525
+  },
+  {
+   "seed": 61,
+   "k_eff": 312.05097939147936,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 757,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 420,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.06983189655172414,
+   "p_hat_filtered": 0.03741379310344828,
+   "local_scope_episodes": 361,
+   "filter_releases_mean": 74.4325
+  },
+  {
+   "seed": 62,
+   "k_eff": 313.79287502586527,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 828,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 460,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07928448275862068,
+   "p_hat_filtered": 0.04106465517241379,
+   "local_scope_episodes": 267,
+   "filter_releases_mean": 103.985
+  },
+  {
+   "seed": 63,
+   "k_eff": 316.1474564451023,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 827,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 443,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07872844827586208,
+   "p_hat_filtered": 0.04003017241379311,
+   "local_scope_episodes": 244,
+   "filter_releases_mean": 113.0225
+  },
+  {
+   "seed": 64,
+   "k_eff": 304.30444138507806,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1787,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 408,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 5,
+     "wasted_node_retrains": 2000,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.16651293103448275,
+   "p_hat_filtered": 0.03575,
+   "local_scope_episodes": 876,
+   "filter_releases_mean": 135.5375
+  },
+  {
+   "seed": 65,
+   "k_eff": 317.69918806352183,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1875,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 468,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.16414224137931036,
+   "p_hat_filtered": 0.04156034482758621,
+   "local_scope_episodes": 748,
+   "filter_releases_mean": 115.73
+  },
+  {
+   "seed": 66,
+   "k_eff": 310.4460686309288,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1155,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 483,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10697844827586207,
+   "p_hat_filtered": 0.042379310344827587,
+   "local_scope_episodes": 551,
+   "filter_releases_mean": 98.6175
+  },
+  {
+   "seed": 67,
+   "k_eff": 316.09192978736183,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 859,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 509,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.0792198275862069,
+   "p_hat_filtered": 0.045297413793103446,
+   "local_scope_episodes": 408,
+   "filter_releases_mean": 189.2075
+  },
+  {
+   "seed": 68,
+   "k_eff": 316.72888744599675,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1597,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 481,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.12641810344827586,
+   "p_hat_filtered": 0.04139224137931034,
+   "local_scope_episodes": 551,
+   "filter_releases_mean": 89.025
+  },
+  {
+   "seed": 69,
+   "k_eff": 317.2542930732341,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 462,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 464,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.041948275862068965,
+   "p_hat_filtered": 0.041469827586206896,
+   "local_scope_episodes": 218,
+   "filter_releases_mean": 25.015
+  },
+  {
+   "seed": 70,
+   "k_eff": 318.9349639500467,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 802,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 455,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07431896551724138,
+   "p_hat_filtered": 0.04061637931034483,
+   "local_scope_episodes": 381,
+   "filter_releases_mean": 57.0025
+  },
+  {
+   "seed": 71,
+   "k_eff": 313.34377975578104,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1449,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 429,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.13405603448275863,
+   "p_hat_filtered": 0.037831896551724135,
+   "local_scope_episodes": 709,
+   "filter_releases_mean": 122.42
+  },
+  {
+   "seed": 72,
+   "k_eff": 301.41383817743485,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1450,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 437,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 9,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 8,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 7,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.12884913793103447,
+   "p_hat_filtered": 0.0373448275862069,
+   "local_scope_episodes": 698,
+   "filter_releases_mean": 119.8125
+  },
+  {
+   "seed": 73,
+   "k_eff": 303.01607108445353,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 626,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 456,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.048038793103448274,
+   "p_hat_filtered": 0.04108620689655172,
+   "local_scope_episodes": 212,
+   "filter_releases_mean": 74.715
+  },
+  {
+   "seed": 74,
+   "k_eff": 307.6323132474824,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1444,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 423,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.13494827586206898,
+   "p_hat_filtered": 0.03795258620689655,
+   "local_scope_episodes": 690,
+   "filter_releases_mean": 95.565
+  },
+  {
+   "seed": 75,
+   "k_eff": 300.9731155642088,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1500,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 464,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.13087931034482758,
+   "p_hat_filtered": 0.040508620689655175,
+   "local_scope_episodes": 731,
+   "filter_releases_mean": 183.6975
+  },
+  {
+   "seed": 76,
+   "k_eff": 309.44385673771563,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1172,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 478,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10907758620689655,
+   "p_hat_filtered": 0.04177586206896552,
+   "local_scope_episodes": 567,
+   "filter_releases_mean": 76.3025
+  },
+  {
+   "seed": 77,
+   "k_eff": 322.1736785955247,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 762,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 450,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07063793103448276,
+   "p_hat_filtered": 0.04001724137931034,
+   "local_scope_episodes": 357,
+   "filter_releases_mean": 122.8875
+  },
+  {
+   "seed": 78,
+   "k_eff": 302.2719499643933,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1219,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 466,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10932327586206897,
+   "p_hat_filtered": 0.041646551724137934,
+   "local_scope_episodes": 432,
+   "filter_releases_mean": 104.6725
+  },
+  {
+   "seed": 79,
+   "k_eff": 327.58089117897873,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1185,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 453,
+     "node_detect_frac": 0.99
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.11183189655172414,
+   "p_hat_filtered": 0.039258620689655174,
+   "local_scope_episodes": 414,
+   "filter_releases_mean": 107.48
+  },
+  {
+   "seed": 80,
+   "k_eff": 316.0933428013151,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 846,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 500,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07819396551724138,
+   "p_hat_filtered": 0.04494396551724138,
+   "local_scope_episodes": 409,
+   "filter_releases_mean": 74.2325
+  },
+  {
+   "seed": 81,
+   "k_eff": 310.85212072623705,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 853,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 523,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07933189655172414,
+   "p_hat_filtered": 0.04729741379310345,
+   "local_scope_episodes": 407,
+   "filter_releases_mean": 74.2475
+  },
+  {
+   "seed": 82,
+   "k_eff": 303.528493506074,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1271,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 413,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.11245689655172414,
+   "p_hat_filtered": 0.036482758620689656,
+   "local_scope_episodes": 525,
+   "filter_releases_mean": 124.78
+  },
+  {
+   "seed": 83,
+   "k_eff": 319.3647164971248,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1844,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 450,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 10,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 9,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 9,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.16554310344827586,
+   "p_hat_filtered": 0.039133620689655174,
+   "local_scope_episodes": 532,
+   "filter_releases_mean": 123.6175
+  },
+  {
+   "seed": 84,
+   "k_eff": 318.33565816261637,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1891,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 439,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.15295258620689656,
+   "p_hat_filtered": 0.037314655172413794,
+   "local_scope_episodes": 706,
+   "filter_releases_mean": 139.3525
+  },
+  {
+   "seed": 85,
+   "k_eff": 314.73481264908264,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 837,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 499,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07693103448275862,
+   "p_hat_filtered": 0.04388362068965517,
+   "local_scope_episodes": 397,
+   "filter_releases_mean": 106.38
+  },
+  {
+   "seed": 86,
+   "k_eff": 308.6394108267541,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1839,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 496,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 13,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 12,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 12,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.1621810344827586,
+   "p_hat_filtered": 0.04235344827586207,
+   "local_scope_episodes": 888,
+   "filter_releases_mean": 140.235
+  },
+  {
+   "seed": 87,
+   "k_eff": 321.2823045512978,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 431,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 433,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.039155172413793106,
+   "p_hat_filtered": 0.038706896551724136,
+   "local_scope_episodes": 204,
+   "filter_releases_mean": 0.0
+  },
+  {
+   "seed": 88,
+   "k_eff": 314.16592926435277,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1126,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 452,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.09582327586206897,
+   "p_hat_filtered": 0.040314655172413796,
+   "local_scope_episodes": 543,
+   "filter_releases_mean": 43.05
+  },
+  {
+   "seed": 89,
+   "k_eff": 311.385602418507,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1124,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 424,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.09284913793103448,
+   "p_hat_filtered": 0.03682758620689655,
+   "local_scope_episodes": 368,
+   "filter_releases_mean": 63.4575
+  },
+  {
+   "seed": 90,
+   "k_eff": 311.5325535093194,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1514,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 467,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.14089655172413793,
+   "p_hat_filtered": 0.04120689655172414,
+   "local_scope_episodes": 725,
+   "filter_releases_mean": 146.695
+  },
+  {
+   "seed": 91,
+   "k_eff": 321.5823649983965,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1262,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 469,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 8,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 8,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10808620689655173,
+   "p_hat_filtered": 0.04172844827586207,
+   "local_scope_episodes": 561,
+   "filter_releases_mean": 119.46
+  },
+  {
+   "seed": 92,
+   "k_eff": 307.097307087214,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1141,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 448,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.09732758620689655,
+   "p_hat_filtered": 0.03962068965517242,
+   "local_scope_episodes": 396,
+   "filter_releases_mean": 64.3975
+  },
+  {
+   "seed": 93,
+   "k_eff": 312.9637710872838,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 745,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 402,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.0684051724137931,
+   "p_hat_filtered": 0.03493103448275862,
+   "local_scope_episodes": 346,
+   "filter_releases_mean": 25.1075
+  },
+  {
+   "seed": 94,
+   "k_eff": 316.08666362839836,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1130,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 460,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 2,
+     "wasted_node_retrains": 800,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.10505603448275862,
+   "p_hat_filtered": 0.040439655172413796,
+   "local_scope_episodes": 545,
+   "filter_releases_mean": 149.025
+  },
+  {
+   "seed": 95,
+   "k_eff": 305.2566274906303,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 828,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 499,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 1,
+     "wasted_node_retrains": 400,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.07689224137931035,
+   "p_hat_filtered": 0.04414655172413793,
+   "local_scope_episodes": 398,
+   "filter_releases_mean": 105.8825
+  },
+  {
+   "seed": 96,
+   "k_eff": 308.11044750913544,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 450,
+     "node_detect_frac": 0.99
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 451,
+     "node_detect_frac": 0.985
+    },
+    "FDC@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 5,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 8,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.041077586206896555,
+   "p_hat_filtered": 0.040629310344827585,
+   "local_scope_episodes": 215,
+   "filter_releases_mean": 135.78
+  },
+  {
+   "seed": 97,
+   "k_eff": 314.3584851097755,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1499,
+     "node_detect_frac": 1.0
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 499,
+     "node_detect_frac": 1.0
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.1394051724137931,
+   "p_hat_filtered": 0.04328879310344828,
+   "local_scope_episodes": 718,
+   "filter_releases_mean": 124.3775
+  },
+  {
+   "seed": 98,
+   "k_eff": 320.5848462482702,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1634,
+     "node_detect_frac": 0.98
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 448,
+     "node_detect_frac": 0.985
+    },
+    "FDC@0.25": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 3,
+     "wasted_node_retrains": 1200,
+     "detected": false,
+     "delay": null,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 4,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.14020258620689655,
+   "p_hat_filtered": 0.03902155172413793,
+   "local_scope_episodes": 706,
+   "filter_releases_mean": 169.2875
+  },
+  {
+   "seed": 99,
+   "k_eff": 317.1303227302726,
+   "npre": 580,
+   "methods": {
+    "local": {
+     "false_episodes": null,
+     "wasted_node_retrains": 1544,
+     "node_detect_frac": 0.995
+    },
+    "local+filter": {
+     "false_episodes": null,
+     "wasted_node_retrains": 463,
+     "node_detect_frac": 0.995
+    },
+    "FDC@0.25": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 9,
+     "detected_raw": true
+    },
+    "FDC+filter@0.25": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 2,
+     "detected_raw": true
+    },
+    "FDC@0.35": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 8,
+     "detected_raw": true
+    },
+    "FDC+filter@0.35": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    },
+    "FDC@0.45": {
+     "false_episodes": 4,
+     "wasted_node_retrains": 1600,
+     "detected": true,
+     "delay": 8,
+     "detected_raw": true
+    },
+    "FDC+filter@0.45": {
+     "false_episodes": 0,
+     "wasted_node_retrains": 0,
+     "detected": true,
+     "delay": 3,
+     "detected_raw": true
+    }
+   },
+   "p_hat_raw": 0.140875,
+   "p_hat_filtered": 0.039844827586206895,
+   "local_scope_episodes": 585,
+   "filter_releases_mean": 133.325
+  }
+ ]
+}

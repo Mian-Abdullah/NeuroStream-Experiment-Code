@@ -1,0 +1,802 @@
+{
+ "params": {
+  "CUT": 0.008718315467762153,
+  "MAG": 0.03,
+  "M": 50000,
+  "NB": 5000,
+  "MB": 10,
+  "W": 10,
+  "seeds": 40,
+  "priv_cfgs": [
+   [
+    0.2,
+    1
+   ],
+   [
+    0.2,
+    5
+   ],
+   [
+    0.2,
+    10
+   ],
+   [
+    0.5,
+    5
+   ]
+  ]
+ },
+ "main_outage_drift": {
+  "K": 50,
+  "n": 40,
+  "p_hat": 0.10281379310344829,
+  "K_eff": 37.51621742786165,
+  "node_episodes_pre_per_1000": 246.6379310344828,
+  "methods": {
+   "FDC(th=0.35)": {
+    "fp_block_rate": 0.13405172413793104,
+    "false_episodes_per_1000": 2.9310344827586206,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 146.55172413793102
+   },
+   "FDC(th=0.45)": {
+    "fp_block_rate": 0.09137931034482757,
+    "false_episodes_per_1000": 2.5,
+    "detect_rate": 0.925,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 125.0
+   },
+   "FDC(th=0.55)": {
+    "fp_block_rate": 0.011163793103448276,
+    "false_episodes_per_1000": 0.5172413793103449,
+    "detect_rate": 0.3,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 25.862068965517242
+   },
+   "FDC+filter(th=0.35)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 0.975,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=1)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 0.975,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=1) [no filter]": {
+    "fp_block_rate": 0.12163793103448275,
+    "false_episodes_per_1000": 3.0172413793103443,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 150.8620689655172
+   },
+   "FDC+filter+SVT(eps=0.2,c=5)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 0.975,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=5) [no filter]": {
+    "fp_block_rate": 0.1436637931034483,
+    "false_episodes_per_1000": 7.198275862068965,
+    "detect_rate": 1.0,
+    "delay_median": 2.0,
+    "wasted_node_retrains_per_1000": 359.91379310344826
+   },
+   "FDC+filter+SVT(eps=0.2,c=10)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 0.975,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=10) [no filter]": {
+    "fp_block_rate": 0.9856896551724137,
+    "false_episodes_per_1000": 1.7241379310344827,
+    "detect_rate": 1.0,
+    "delay_median": 0.0,
+    "wasted_node_retrains_per_1000": 86.20689655172413
+   },
+   "FDC+filter+SVT(eps=0.5,c=5)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 0.975,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.5,c=5) [no filter]": {
+    "fp_block_rate": 0.12189655172413794,
+    "false_episodes_per_1000": 3.0172413793103443,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 150.8620689655172
+   }
+  },
+  "priv": {
+   "FDC+filter+SVT(eps=0.2,c=1)": {
+    "p_hat": 0.09504310344827586,
+    "above_pre_per_node_per_1000": 9.545689655172414
+   },
+   "FDC+filter+SVT(eps=0.2,c=5)": {
+    "p_hat": 0.2457612068965517,
+    "above_pre_per_node_per_1000": 24.750000000000004
+   },
+   "FDC+filter+SVT(eps=0.2,c=10)": {
+    "p_hat": 0.557526724137931,
+    "above_pre_per_node_per_1000": 56.17758620689655
+   },
+   "FDC+filter+SVT(eps=0.5,c=5)": {
+    "p_hat": 0.0979241379310345,
+    "above_pre_per_node_per_1000": 9.837931034482759
+   }
+  },
+  "node_detect_frac": 0.999,
+  "node_delay_median": 2.0
+ },
+ "local_faults_only": {
+  "K": 50,
+  "n": 40,
+  "p_hat": 0.0416,
+  "K_eff": 38.37103045871199,
+  "node_episodes_pre_per_1000": 98.83620689655173,
+  "methods": {
+   "FDC(th=0.35)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC(th=0.45)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC(th=0.55)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 0.475,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter(th=0.35)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=1)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=1) [no filter]": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=5)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=5) [no filter]": {
+    "fp_block_rate": 0.01896551724137931,
+    "false_episodes_per_1000": 4.870689655172414,
+    "detect_rate": 1.0,
+    "delay_median": 2.0,
+    "wasted_node_retrains_per_1000": 243.5344827586207
+   },
+   "FDC+filter+SVT(eps=0.2,c=10)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=10) [no filter]": {
+    "fp_block_rate": 0.9866379310344827,
+    "false_episodes_per_1000": 1.7241379310344827,
+    "detect_rate": 1.0,
+    "delay_median": 0.0,
+    "wasted_node_retrains_per_1000": 86.20689655172413
+   },
+   "FDC+filter+SVT(eps=0.5,c=5)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.5,c=5) [no filter]": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "detect_rate": 1.0,
+    "delay_median": 3.0,
+    "wasted_node_retrains_per_1000": 0.0
+   }
+  },
+  "priv": {
+   "FDC+filter+SVT(eps=0.2,c=1)": {
+    "p_hat": 0.03858448275862069,
+    "above_pre_per_node_per_1000": 3.9043103448275858
+   },
+   "FDC+filter+SVT(eps=0.2,c=5)": {
+    "p_hat": 0.20132586206896552,
+    "above_pre_per_node_per_1000": 20.302586206896553
+   },
+   "FDC+filter+SVT(eps=0.2,c=10)": {
+    "p_hat": 0.5347405172413794,
+    "above_pre_per_node_per_1000": 53.91034482758621
+   },
+   "FDC+filter+SVT(eps=0.5,c=5)": {
+    "p_hat": 0.04155862068965517,
+    "above_pre_per_node_per_1000": 4.204310344827586
+   }
+  },
+  "node_detect_frac": 0.999,
+  "node_delay_median": 2.0
+ },
+ "outage_no_drift": {
+  "K": 50,
+  "n": 40,
+  "p_hat": 0.1083,
+  "K_eff": 38.53377229281908,
+  "node_episodes_pre_per_1000": 254.8093220338983,
+  "methods": {
+   "FDC(th=0.35)": {
+    "fp_block_rate": 0.15010593220338983,
+    "false_episodes_per_1000": 3.6016949152542375,
+    "wasted_node_retrains_per_1000": 180.08474576271186
+   },
+   "FDC(th=0.45)": {
+    "fp_block_rate": 0.1,
+    "false_episodes_per_1000": 3.0508474576271185,
+    "wasted_node_retrains_per_1000": 152.54237288135593
+   },
+   "FDC(th=0.55)": {
+    "fp_block_rate": 0.013983050847457629,
+    "false_episodes_per_1000": 0.6779661016949152,
+    "wasted_node_retrains_per_1000": 33.89830508474576
+   },
+   "FDC+filter(th=0.35)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=1)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=1) [no filter]": {
+    "fp_block_rate": 0.13705508474576272,
+    "false_episodes_per_1000": 3.75,
+    "wasted_node_retrains_per_1000": 187.5
+   },
+   "FDC+filter+SVT(eps=0.2,c=5)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=5) [no filter]": {
+    "fp_block_rate": 0.1601059322033898,
+    "false_episodes_per_1000": 7.584745762711864,
+    "wasted_node_retrains_per_1000": 379.2372881355932
+   },
+   "FDC+filter+SVT(eps=0.2,c=10)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.2,c=10) [no filter]": {
+    "fp_block_rate": 0.9876906779661017,
+    "false_episodes_per_1000": 0.8474576271186439,
+    "wasted_node_retrains_per_1000": 42.37288135593219
+   },
+   "FDC+filter+SVT(eps=0.5,c=5)": {
+    "fp_block_rate": 0.0,
+    "false_episodes_per_1000": 0.0,
+    "wasted_node_retrains_per_1000": 0.0
+   },
+   "FDC+filter+SVT(eps=0.5,c=5) [no filter]": {
+    "fp_block_rate": 0.13692796610169494,
+    "false_episodes_per_1000": 3.7711864406779663,
+    "wasted_node_retrains_per_1000": 188.55932203389833
+   }
+  },
+  "priv": {
+   "FDC+filter+SVT(eps=0.2,c=1)": {
+    "p_hat": 0.10003135593220339,
+    "above_pre_per_node_per_1000": 10.072457627118643
+   },
+   "FDC+filter+SVT(eps=0.2,c=5)": {
+    "p_hat": 0.2503673728813559,
+    "above_pre_per_node_per_1000": 25.157203389830507
+   },
+   "FDC+filter+SVT(eps=0.2,c=10)": {
+    "p_hat": 0.560103813559322,
+    "above_pre_per_node_per_1000": 56.239406779661024
+   },
+   "FDC+filter+SVT(eps=0.5,c=5)": {
+    "p_hat": 0.10280677966101695,
+    "above_pre_per_node_per_1000": 10.352542372881356
+   }
+  }
+ },
+ "drift_fraction_sweep": [
+  {
+   "K": 50,
+   "n": 40,
+   "p_hat": 0.11909224137931033,
+   "K_eff": 38.798452224778856,
+   "node_episodes_pre_per_1000": 284.7413793103448,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.16745689655172416,
+     "false_episodes_per_1000": 3.879310344827586,
+     "detect_rate": 0.65,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 193.9655172413793
+    },
+    "FDC(th=0.45)": {
+     "fp_block_rate": 0.1097844827586207,
+     "false_episodes_per_1000": 3.1034482758620685,
+     "detect_rate": 0.5,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 155.17241379310343
+    },
+    "FDC(th=0.55)": {
+     "fp_block_rate": 0.020646551724137933,
+     "false_episodes_per_1000": 0.8189655172413792,
+     "detect_rate": 0.325,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 40.94827586206896
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "detect_rate": 0.3,
+     "delay_median": 4.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "node_detect_frac": 0.9966666666666667,
+   "node_delay_median": 2.0,
+   "frac_drift": 0.3
+  },
+  {
+   "K": 50,
+   "n": 40,
+   "p_hat": 0.11909224137931033,
+   "K_eff": 38.798452224778856,
+   "node_episodes_pre_per_1000": 284.7413793103448,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.16745689655172416,
+     "false_episodes_per_1000": 3.879310344827586,
+     "detect_rate": 1.0,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 193.9655172413793
+    },
+    "FDC(th=0.45)": {
+     "fp_block_rate": 0.1097844827586207,
+     "false_episodes_per_1000": 3.1034482758620685,
+     "detect_rate": 0.675,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 155.17241379310343
+    },
+    "FDC(th=0.55)": {
+     "fp_block_rate": 0.020646551724137933,
+     "false_episodes_per_1000": 0.8189655172413792,
+     "detect_rate": 0.4,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 40.94827586206896
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "detect_rate": 0.9,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "node_detect_frac": 0.9974999999999999,
+   "node_delay_median": 2.0,
+   "frac_drift": 0.4
+  },
+  {
+   "K": 50,
+   "n": 40,
+   "p_hat": 0.11909224137931033,
+   "K_eff": 38.798452224778856,
+   "node_episodes_pre_per_1000": 284.7413793103448,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.16745689655172416,
+     "false_episodes_per_1000": 3.879310344827586,
+     "detect_rate": 1.0,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 193.9655172413793
+    },
+    "FDC(th=0.45)": {
+     "fp_block_rate": 0.1097844827586207,
+     "false_episodes_per_1000": 3.1034482758620685,
+     "detect_rate": 0.975,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 155.17241379310343
+    },
+    "FDC(th=0.55)": {
+     "fp_block_rate": 0.020646551724137933,
+     "false_episodes_per_1000": 0.8189655172413792,
+     "detect_rate": 0.625,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 40.94827586206896
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "detect_rate": 0.925,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "node_detect_frac": 0.998,
+   "node_delay_median": 2.0,
+   "frac_drift": 0.5
+  },
+  {
+   "K": 50,
+   "n": 40,
+   "p_hat": 0.11909224137931033,
+   "K_eff": 38.798452224778856,
+   "node_episodes_pre_per_1000": 284.7413793103448,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.16745689655172416,
+     "false_episodes_per_1000": 3.879310344827586,
+     "detect_rate": 1.0,
+     "delay_median": 2.0,
+     "wasted_node_retrains_per_1000": 193.9655172413793
+    },
+    "FDC(th=0.45)": {
+     "fp_block_rate": 0.1097844827586207,
+     "false_episodes_per_1000": 3.1034482758620685,
+     "detect_rate": 1.0,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 155.17241379310343
+    },
+    "FDC(th=0.55)": {
+     "fp_block_rate": 0.020646551724137933,
+     "false_episodes_per_1000": 0.8189655172413792,
+     "detect_rate": 1.0,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 40.94827586206896
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "detect_rate": 0.95,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "node_detect_frac": 0.9983333333333334,
+   "node_delay_median": 2.0,
+   "frac_drift": 0.6
+  },
+  {
+   "K": 50,
+   "n": 40,
+   "p_hat": 0.11909224137931033,
+   "K_eff": 38.798452224778856,
+   "node_episodes_pre_per_1000": 284.7413793103448,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.16745689655172416,
+     "false_episodes_per_1000": 3.879310344827586,
+     "detect_rate": 1.0,
+     "delay_median": 2.0,
+     "wasted_node_retrains_per_1000": 193.9655172413793
+    },
+    "FDC(th=0.45)": {
+     "fp_block_rate": 0.1097844827586207,
+     "false_episodes_per_1000": 3.1034482758620685,
+     "detect_rate": 1.0,
+     "delay_median": 2.0,
+     "wasted_node_retrains_per_1000": 155.17241379310343
+    },
+    "FDC(th=0.55)": {
+     "fp_block_rate": 0.020646551724137933,
+     "false_episodes_per_1000": 0.8189655172413792,
+     "detect_rate": 1.0,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 40.94827586206896
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "detect_rate": 1.0,
+     "delay_median": 3.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "node_detect_frac": 0.99875,
+   "node_delay_median": 2.0,
+   "frac_drift": 0.8
+  },
+  {
+   "K": 50,
+   "n": 40,
+   "p_hat": 0.11909224137931033,
+   "K_eff": 38.798452224778856,
+   "node_episodes_pre_per_1000": 284.7413793103448,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.16745689655172416,
+     "false_episodes_per_1000": 3.879310344827586,
+     "detect_rate": 1.0,
+     "delay_median": 2.0,
+     "wasted_node_retrains_per_1000": 193.9655172413793
+    },
+    "FDC(th=0.45)": {
+     "fp_block_rate": 0.1097844827586207,
+     "false_episodes_per_1000": 3.1034482758620685,
+     "detect_rate": 1.0,
+     "delay_median": 2.0,
+     "wasted_node_retrains_per_1000": 155.17241379310343
+    },
+    "FDC(th=0.55)": {
+     "fp_block_rate": 0.020646551724137933,
+     "false_episodes_per_1000": 0.8189655172413792,
+     "detect_rate": 1.0,
+     "delay_median": 2.0,
+     "wasted_node_retrains_per_1000": 40.94827586206896
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "detect_rate": 1.0,
+     "delay_median": 2.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "node_detect_frac": 0.999,
+   "node_delay_median": 2.0,
+   "frac_drift": 1.0
+  }
+ ],
+ "K_sweep": [
+  {
+   "K": 10,
+   "n": 40,
+   "p_hat": 0.09904872881355932,
+   "K_eff": 8.114149666092505,
+   "node_episodes_pre_per_1000": 45.65677966101695,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.02186440677966102,
+     "false_episodes_per_1000": 1.3771186440677965,
+     "wasted_node_retrains_per_1000": 13.771186440677965
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.016652542372881357,
+     "false_episodes_per_1000": 1.25,
+     "wasted_node_retrains_per_1000": 12.5
+    }
+   },
+   "priv": {},
+   "tag": "p~0.1"
+  },
+  {
+   "K": 25,
+   "n": 40,
+   "p_hat": 0.1019186440677966,
+   "K_eff": 19.762302807221218,
+   "node_episodes_pre_per_1000": 118.13559322033898,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.0014830508474576272,
+     "false_episodes_per_1000": 0.1694915254237288,
+     "wasted_node_retrains_per_1000": 4.23728813559322
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.001059322033898305,
+     "false_episodes_per_1000": 0.1271186440677966,
+     "wasted_node_retrains_per_1000": 3.1779661016949152
+    }
+   },
+   "priv": {},
+   "tag": "p~0.1"
+  },
+  {
+   "K": 50,
+   "n": 40,
+   "p_hat": 0.10050805084745762,
+   "K_eff": 38.67318930369456,
+   "node_episodes_pre_per_1000": 232.86016949152545,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "wasted_node_retrains_per_1000": 0.0
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "tag": "p~0.1"
+  },
+  {
+   "K": 100,
+   "n": 40,
+   "p_hat": 0.10056588983050849,
+   "K_eff": 76.61919381963008,
+   "node_episodes_pre_per_1000": 465.635593220339,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "wasted_node_retrains_per_1000": 0.0
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "tag": "p~0.1"
+  },
+  {
+   "K": 200,
+   "n": 40,
+   "p_hat": 0.10123400423728815,
+   "K_eff": 154.4416886868161,
+   "node_episodes_pre_per_1000": 937.1822033898304,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "wasted_node_retrains_per_1000": 0.0
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "tag": "p~0.1"
+  },
+  {
+   "K": 10,
+   "n": 40,
+   "p_hat": 0.20553601694915252,
+   "K_eff": 8.283023775974671,
+   "node_episodes_pre_per_1000": 93.72881355932205,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.1430084745762712,
+     "false_episodes_per_1000": 6.271186440677966,
+     "wasted_node_retrains_per_1000": 62.71186440677966
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.11427966101694916,
+     "false_episodes_per_1000": 5.974576271186441,
+     "wasted_node_retrains_per_1000": 59.745762711864415
+    }
+   },
+   "priv": {},
+   "tag": "p~0.2"
+  },
+  {
+   "K": 25,
+   "n": 40,
+   "p_hat": 0.20937542372881354,
+   "K_eff": 19.5272128630825,
+   "node_episodes_pre_per_1000": 239.364406779661,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.07016949152542373,
+     "false_episodes_per_1000": 4.788135593220339,
+     "wasted_node_retrains_per_1000": 119.70338983050848
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.04478813559322034,
+     "false_episodes_per_1000": 3.9830508474576276,
+     "wasted_node_retrains_per_1000": 99.57627118644069
+    }
+   },
+   "priv": {},
+   "tag": "p~0.2"
+  },
+  {
+   "K": 50,
+   "n": 40,
+   "p_hat": 0.208839406779661,
+   "K_eff": 38.324508813248656,
+   "node_episodes_pre_per_1000": 477.3305084745763,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.019576271186440678,
+     "false_episodes_per_1000": 1.8644067796610166,
+     "wasted_node_retrains_per_1000": 93.22033898305084
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.008601694915254237,
+     "false_episodes_per_1000": 1.292372881355932,
+     "wasted_node_retrains_per_1000": 64.61864406779661
+    }
+   },
+   "priv": {},
+   "tag": "p~0.2"
+  },
+  {
+   "K": 100,
+   "n": 40,
+   "p_hat": 0.20985911016949155,
+   "K_eff": 77.74200473218914,
+   "node_episodes_pre_per_1000": 959.5550847457628,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.004046610169491526,
+     "false_episodes_per_1000": 0.3389830508474576,
+     "wasted_node_retrains_per_1000": 33.89830508474576
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0017161016949152543,
+     "false_episodes_per_1000": 0.25423728813559315,
+     "wasted_node_retrains_per_1000": 25.423728813559315
+    }
+   },
+   "priv": {},
+   "tag": "p~0.2"
+  },
+  {
+   "K": 200,
+   "n": 40,
+   "p_hat": 0.21028993644067798,
+   "K_eff": 151.5283290056589,
+   "node_episodes_pre_per_1000": 1923.1144067796608,
+   "methods": {
+    "FDC(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "wasted_node_retrains_per_1000": 0.0
+    },
+    "FDC+filter(th=0.35)": {
+     "fp_block_rate": 0.0,
+     "false_episodes_per_1000": 0.0,
+     "wasted_node_retrains_per_1000": 0.0
+    }
+   },
+   "priv": {},
+   "tag": "p~0.2"
+  }
+ ]
+}

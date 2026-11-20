@@ -1,0 +1,1825 @@
+{
+ "dataset": "airlines",
+ "K": 50,
+ "B": 600,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "thresholds": {
+  "theta_fdc": 0.15,
+  "theta_filter": 0.15,
+  "candidates_fdc": [
+   [
+    0.15,
+    1.8633540372670805,
+    1.0
+   ],
+   [
+    0.2,
+    3.1055900621118013,
+    1.0
+   ],
+   [
+    0.25,
+    1.5527950310559004,
+    0.8
+   ],
+   [
+    0.3,
+    1.8633540372670805,
+    0.8
+   ],
+   [
+    0.35,
+    1.2422360248447204,
+    0.7
+   ],
+   [
+    0.4,
+    0.9316770186335402,
+    0.3
+   ],
+   [
+    0.45,
+    0.6211180124223602,
+    0.1
+   ],
+   [
+    0.5,
+    0.3105590062111801,
+    0.0
+   ],
+   [
+    0.55,
+    0.3105590062111801,
+    0.0
+   ]
+  ],
+  "candidates_filter": [
+   [
+    0.15,
+    0.0,
+    1.0
+   ],
+   [
+    0.2,
+    0.3105590062111801,
+    1.0
+   ],
+   [
+    0.25,
+    0.6211180124223602,
+    0.8
+   ],
+   [
+    0.3,
+    0.6211180124223602,
+    0.5
+   ],
+   [
+    0.35,
+    0.0,
+    0.3
+   ],
+   [
+    0.4,
+    0.0,
+    0.1
+   ],
+   [
+    0.45,
+    0.0,
+    0.0
+   ],
+   [
+    0.5,
+    0.0,
+    0.0
+   ],
+   [
+    0.55,
+    0.0,
+    0.0
+   ]
+  ]
+ },
+ "gamma": 1.0,
+ "L": 10,
+ "R_tr": 10,
+ "P": 50,
+ "versions": {
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "dp-accounting": "0.7.0",
+  "river": "0.27.0",
+  "pandas": "3.0.5",
+  "matplotlib": "3.11.2"
+ },
+ "runtime_s": 260.0,
+ "summary": {
+  "static": {
+   "acc_all": {
+    "mean": 0.5795402943751998,
+    "ci95": [
+     0.5774619380836773,
+     0.5811409070888107
+    ],
+    "n": 10
+   },
+   "acc_pre": {
+    "mean": 0.6218416224566286,
+    "ci95": [
+     0.6186417371749475,
+     0.6241469222773036
+    ],
+    "n": 10
+   },
+   "acc_post": {
+    "mean": 0.5065598719606736,
+    "ci95": [
+     0.5057631451088549,
+     0.5071500710932644
+    ],
+    "n": 10
+   },
+   "acc_adapt": {
+    "mean": 0.5083066458835198,
+    "ci95": [
+     0.5055604364460818,
+     0.510012753294601
+    ],
+    "n": 10
+   },
+   "retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "retrains_pre_t0": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "retrains_during_outage": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "node_retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "releases_per_node": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   }
+  },
+  "periodic": {
+   "acc_all": {
+    "mean": 0.5766387532837989,
+    "ci95": [
+     0.5744742841187359,
+     0.5781404259893346
+    ],
+    "n": 10
+   },
+   "acc_pre": {
+    "mean": 0.6193931939319393,
+    "ci95": [
+     0.6162539395595977,
+     0.6216040789195769
+    ],
+    "n": 10
+   },
+   "acc_post": {
+    "mean": 0.5028765978121852,
+    "ci95": [
+     0.5002000078595569,
+     0.5062262159091722
+    ],
+    "n": 10
+   },
+   "acc_adapt": {
+    "mean": 0.5036956213688535,
+    "ci95": [
+     0.4960493127391242,
+     0.515358367578291
+    ],
+    "n": 10
+   },
+   "retrains": {
+    "mean": 10.0,
+    "ci95": [
+     10.0,
+     10.0
+    ],
+    "n": 10
+   },
+   "retrains_pre_t0": {
+    "mean": 6.0,
+    "ci95": [
+     6.0,
+     6.0
+    ],
+    "n": 10
+   },
+   "retrains_during_outage": {
+    "mean": 0.9,
+    "ci95": [
+     0.3,
+     1.5
+    ],
+    "n": 10
+   },
+   "node_retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "releases_per_node": {
+    "mean": 100.0,
+    "ci95": [
+     100.0,
+     100.0
+    ],
+    "n": 10
+   }
+  },
+  "oracle": {
+   "acc_all": {
+    "mean": 0.5858417798845361,
+    "ci95": [
+     0.5838477077641852,
+     0.5873026771153957
+    ],
+    "n": 10
+   },
+   "acc_pre": {
+    "mean": 0.6218416224566286,
+    "ci95": [
+     0.6186417371749475,
+     0.6241469222773036
+    ],
+    "n": 10
+   },
+   "acc_post": {
+    "mean": 0.5237330037082818,
+    "ci95": [
+     0.5208806812092286,
+     0.5266204262737839
+    ],
+    "n": 10
+   },
+   "acc_adapt": {
+    "mean": 0.5216239195125408,
+    "ci95": [
+     0.5148873458976903,
+     0.5304350290491711
+    ],
+    "n": 10
+   },
+   "retrains": {
+    "mean": 1.0,
+    "ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 10
+   },
+   "retrains_pre_t0": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "retrains_during_outage": {
+    "mean": 0.1,
+    "ci95": [
+     0.0,
+     0.3
+    ],
+    "n": 10
+   },
+   "node_retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "releases_per_node": {
+    "mean": 10.0,
+    "ci95": [
+     10.0,
+     10.0
+    ],
+    "n": 10
+   }
+  },
+  "local_adwin": {
+   "acc_all": {
+    "mean": 0.5891711980032405,
+    "ci95": [
+     0.5870317932032573,
+     0.5911907343124866
+    ],
+    "n": 10
+   },
+   "acc_pre": {
+    "mean": 0.6246420747035754,
+    "ci95": [
+     0.6218885037335223,
+     0.6272819316577004
+    ],
+    "n": 10
+   },
+   "acc_post": {
+    "mean": 0.5279750208992762,
+    "ci95": [
+     0.5260094171781333,
+     0.5299778503397473
+    ],
+    "n": 10
+   },
+   "acc_adapt": {
+    "mean": 0.532019271645175,
+    "ci95": [
+     0.5301940626328469,
+     0.5333826696896697
+    ],
+    "n": 10
+   },
+   "retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "retrains_pre_t0": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "retrains_during_outage": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "node_retrains": {
+    "mean": 241.2,
+    "ci95": [
+     235.7,
+     246.2
+    ],
+    "n": 10
+   },
+   "releases_per_node": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   }
+  },
+  "fdc": {
+   "acc_all": {
+    "mean": 0.5798027361057947,
+    "ci95": [
+     0.577231685447462,
+     0.5823112438322261
+    ],
+    "n": 10
+   },
+   "acc_pre": {
+    "mean": 0.6275754676738687,
+    "ci95": [
+     0.6232719880229106,
+     0.6318324491325722
+    ],
+    "n": 10
+   },
+   "acc_post": {
+    "mean": 0.4973827675643233,
+    "ci95": [
+     0.49303911201297534,
+     0.5009867316390033
+    ],
+    "n": 10
+   },
+   "acc_adapt": {
+    "mean": 0.49303386708232955,
+    "ci95": [
+     0.48369250389683993,
+     0.5022396910868641
+    ],
+    "n": 10
+   },
+   "retrains": {
+    "mean": 17.3,
+    "ci95": [
+     16.6,
+     18.002499999999987
+    ],
+    "n": 10
+   },
+   "retrains_pre_t0": {
+    "mean": 10.4,
+    "ci95": [
+     9.8,
+     11.0
+    ],
+    "n": 10
+   },
+   "retrains_during_outage": {
+    "mean": 1.8,
+    "ci95": [
+     1.0,
+     2.7
+    ],
+    "n": 10
+   },
+   "node_retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "releases_per_node": {
+    "mean": 173.0,
+    "ci95": [
+     166.0,
+     180.02499999999986
+    ],
+    "n": 10
+   }
+  },
+  "fdc_filter": {
+   "acc_all": {
+    "mean": 0.5765808116030182,
+    "ci95": [
+     0.573217106953526,
+     0.5794544174632555
+    ],
+    "n": 10
+   },
+   "acc_pre": {
+    "mean": 0.6272880506582843,
+    "ci95": [
+     0.6240079246752063,
+     0.6303540116209243
+    ],
+    "n": 10
+   },
+   "acc_post": {
+    "mean": 0.4890980801246097,
+    "ci95": [
+     0.4836690376329873,
+     0.4942734911437085
+    ],
+    "n": 10
+   },
+   "acc_adapt": {
+    "mean": 0.48318548958480945,
+    "ci95": [
+     0.47745217514524585,
+     0.48923189740683004
+    ],
+    "n": 10
+   },
+   "retrains": {
+    "mean": 15.2,
+    "ci95": [
+     14.5,
+     15.9
+    ],
+    "n": 10
+   },
+   "retrains_pre_t0": {
+    "mean": 8.2,
+    "ci95": [
+     7.4,
+     9.0
+    ],
+    "n": 10
+   },
+   "retrains_during_outage": {
+    "mean": 0.9,
+    "ci95": [
+     0.4,
+     1.4
+    ],
+    "n": 10
+   },
+   "node_retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "releases_per_node": {
+    "mean": 152.0,
+    "ci95": [
+     145.0,
+     159.0
+    ],
+    "n": 10
+   }
+  },
+  "feddrift": {
+   "acc_all": {
+    "mean": 0.6247408355137933,
+    "ci95": [
+     0.6241314843557462,
+     0.6254249143983766
+    ],
+    "n": 10
+   },
+   "acc_pre": {
+    "mean": 0.637263160510393,
+    "ci95": [
+     0.6365980220408264,
+     0.6378136324292535
+    ],
+    "n": 10
+   },
+   "acc_post": {
+    "mean": 0.6031366776938631,
+    "ci95": [
+     0.6018574455011183,
+     0.6044815371864215
+    ],
+    "n": 10
+   },
+   "acc_adapt": {
+    "mean": 0.5982032024939776,
+    "ci95": [
+     0.5956098200368428,
+     0.6005782910585235
+    ],
+    "n": 10
+   },
+   "retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "retrains_pre_t0": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "retrains_during_outage": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "node_retrains": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "n": 10
+   },
+   "releases_per_node": {
+    "mean": 540.0,
+    "ci95": [
+     540.0,
+     540.0
+    ],
+    "n": 10
+   },
+   "fd_isolations": {
+    "mean": 8720.2,
+    "ci95": [
+     8695.3975,
+     8746.2
+    ],
+    "n": 10
+   },
+   "fd_isolations_pre_t0": {
+    "mean": 5549.7,
+    "ci95": [
+     5534.7,
+     5566.2
+    ],
+    "n": 10
+   },
+   "fd_models_final": {
+    "mean": 19.6,
+    "ci95": [
+     18.0,
+     21.202499999999986
+    ],
+    "n": 10
+   }
+  }
+ },
+ "per_run": [
+  {
+   "seed": 0,
+   "policy": "static",
+   "acc_all": 0.5799988464099755,
+   "acc_pre": 0.6226844086622685,
+   "acc_post": 0.5063555234822124,
+   "acc_adapt": 0.5099617401161967,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.3
+  },
+  {
+   "seed": 0,
+   "policy": "periodic",
+   "acc_all": 0.5766927622713139,
+   "acc_pre": 0.6211644944732275,
+   "acc_post": 0.499967847267375,
+   "acc_adapt": 0.49655661045770155,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.2
+  },
+  {
+   "seed": 0,
+   "policy": "oracle",
+   "acc_all": 0.5859267260590743,
+   "acc_pre": 0.6226844086622685,
+   "acc_post": 0.5225104853633616,
+   "acc_adapt": 0.5184639365169336,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.8
+  },
+  {
+   "seed": 0,
+   "policy": "local_adwin",
+   "acc_all": 0.5896051051602179,
+   "acc_pre": 0.6234837095845706,
+   "acc_post": 0.5311559979136449,
+   "acc_adapt": 0.531727362902083,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 237,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.3
+  },
+  {
+   "seed": 0,
+   "policy": "fdc",
+   "acc_all": 0.5819573276562722,
+   "acc_pre": 0.6294142739407192,
+   "acc_post": 0.5000821680944861,
+   "acc_adapt": 0.5132775967124841,
+   "retrains": 18,
+   "retrains_pre_t0": 11,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 180.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.9
+  },
+  {
+   "seed": 0,
+   "policy": "fdc_filter",
+   "acc_all": 0.5724349663623636,
+   "acc_pre": 0.6219969270399774,
+   "acc_post": 0.48692812792500556,
+   "acc_adapt": 0.47447924047045487,
+   "retrains": 16,
+   "retrains_pre_t0": 10,
+   "retrains_during_outage": 1,
+   "node_retrains": 0,
+   "releases_per_node": 160.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.7
+  },
+  {
+   "seed": 0,
+   "policy": "feddrift",
+   "acc_all": 0.6253349343764584,
+   "acc_pre": 0.6373907173415169,
+   "acc_post": 0.6045356788156362,
+   "acc_adapt": 0.597449341079779,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8730,
+   "fd_isolations_pre_t0": 5567,
+   "fd_models_final": 24,
+   "runtime_s": 25.5
+  },
+  {
+   "seed": 1,
+   "policy": "static",
+   "acc_all": 0.5725660561378855,
+   "acc_pre": 0.6106286315388406,
+   "acc_post": 0.5068985474109905,
+   "acc_adapt": 0.5099617401161967,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.9
+  },
+  {
+   "seed": 1,
+   "policy": "periodic",
+   "acc_all": 0.5680513242689124,
+   "acc_pre": 0.6074521351274119,
+   "acc_post": 0.5000750230427917,
+   "acc_adapt": 0.4962732039110103,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.8
+  },
+  {
+   "seed": 1,
+   "policy": "oracle",
+   "acc_all": 0.5782973011237016,
+   "acc_pre": 0.6106286315388406,
+   "acc_post": 0.5225176304150561,
+   "acc_adapt": 0.5184639365169336,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.4
+  },
+  {
+   "seed": 1,
+   "policy": "local_adwin",
+   "acc_all": 0.5841832320446334,
+   "acc_pre": 0.6173626382728474,
+   "acc_post": 0.52694041741392,
+   "acc_adapt": 0.5335128241462378,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 247,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.3
+  },
+  {
+   "seed": 1,
+   "policy": "fdc",
+   "acc_all": 0.5744170437682542,
+   "acc_pre": 0.6170478876505937,
+   "acc_post": 0.5008681237808755,
+   "acc_adapt": 0.490435029049171,
+   "retrains": 17,
+   "retrains_pre_t0": 11,
+   "retrains_during_outage": 3,
+   "node_retrains": 0,
+   "releases_per_node": 170.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 6.0
+  },
+  {
+   "seed": 1,
+   "policy": "fdc_filter",
+   "acc_all": 0.5754238132442622,
+   "acc_pre": 0.6240510889957385,
+   "acc_post": 0.4915295412162307,
+   "acc_adapt": 0.47643474564262434,
+   "retrains": 13,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 1,
+   "node_retrains": 0,
+   "releases_per_node": 130.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.0
+  },
+  {
+   "seed": 1,
+   "policy": "feddrift",
+   "acc_all": 0.6268660629545538,
+   "acc_pre": 0.6383639593971697,
+   "acc_post": 0.6070293018569989,
+   "acc_adapt": 0.6024656369562137,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8777,
+   "fd_isolations_pre_t0": 5593,
+   "fd_models_final": 22,
+   "runtime_s": 25.4
+  },
+  {
+   "seed": 2,
+   "policy": "static",
+   "acc_all": 0.5747736079576737,
+   "acc_pre": 0.6161036357838325,
+   "acc_post": 0.503468922597655,
+   "acc_adapt": 0.4963582258750177,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.9
+  },
+  {
+   "seed": 2,
+   "policy": "periodic",
+   "acc_all": 0.5793198013727722,
+   "acc_pre": 0.6162734354616274,
+   "acc_post": 0.5155654951163572,
+   "acc_adapt": 0.5524443814652118,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.5
+  },
+  {
+   "seed": 2,
+   "policy": "oracle",
+   "acc_all": 0.585625219575374,
+   "acc_pre": 0.6161036357838325,
+   "acc_post": 0.5330422915609795,
+   "acc_adapt": 0.557092248830948,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 1,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.0
+  },
+  {
+   "seed": 2,
+   "policy": "local_adwin",
+   "acc_all": 0.5827884368330808,
+   "acc_pre": 0.6163355572949669,
+   "acc_post": 0.5249112227326965,
+   "acc_adapt": 0.5286665721978178,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 253,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.6
+  },
+  {
+   "seed": 2,
+   "policy": "fdc",
+   "acc_all": 0.5749492682568731,
+   "acc_pre": 0.6155983782060043,
+   "acc_post": 0.5048193373679059,
+   "acc_adapt": 0.4887912710783619,
+   "retrains": 17,
+   "retrains_pre_t0": 11,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 170.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.8
+  },
+  {
+   "seed": 2,
+   "policy": "fdc_filter",
+   "acc_all": 0.5756938581818373,
+   "acc_pre": 0.6284990122628499,
+   "acc_post": 0.4845916960209207,
+   "acc_adapt": 0.4708799773274763,
+   "retrains": 15,
+   "retrains_pre_t0": 8,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 150.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.5
+  },
+  {
+   "seed": 2,
+   "policy": "feddrift",
+   "acc_all": 0.6246978380674221,
+   "acc_pre": 0.6373161711415094,
+   "acc_post": 0.6029280421843852,
+   "acc_adapt": 0.5988096925038968,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8749,
+   "fd_isolations_pre_t0": 5581,
+   "fd_models_final": 21,
+   "runtime_s": 25.9
+  },
+  {
+   "seed": 3,
+   "policy": "static",
+   "acc_all": 0.5808614171329093,
+   "acc_pre": 0.623148251684537,
+   "acc_post": 0.5079059996999078,
+   "acc_adapt": 0.5099617401161967,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.7
+  },
+  {
+   "seed": 3,
+   "policy": "periodic",
+   "acc_all": 0.5770886533933899,
+   "acc_pre": 0.6211355042843357,
+   "acc_post": 0.501096765435098,
+   "acc_adapt": 0.49655661045770155,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.7
+  },
+  {
+   "seed": 3,
+   "policy": "oracle",
+   "acc_all": 0.5862492069068581,
+   "acc_pre": 0.623148251684537,
+   "acc_post": 0.5225890809320005,
+   "acc_adapt": 0.5184639365169336,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.3
+  },
+  {
+   "seed": 3,
+   "policy": "local_adwin",
+   "acc_all": 0.5915557210199833,
+   "acc_pre": 0.6301100384741222,
+   "acc_post": 0.5250398336631965,
+   "acc_adapt": 0.5340796372396203,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 240,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.6
+  },
+  {
+   "seed": 3,
+   "policy": "fdc",
+   "acc_all": 0.5809086094520972,
+   "acc_pre": 0.6379332480193489,
+   "acc_post": 0.48252677608122496,
+   "acc_adapt": 0.49428935808417174,
+   "retrains": 18,
+   "retrains_pre_t0": 10,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 180.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 6.1
+  },
+  {
+   "seed": 3,
+   "policy": "fdc_filter",
+   "acc_all": 0.5786407563355689,
+   "acc_pre": 0.6263827284737494,
+   "acc_post": 0.49627385554134484,
+   "acc_adapt": 0.4934674790987672,
+   "retrains": 16,
+   "retrains_pre_t0": 9,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 160.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 6.1
+  },
+  {
+   "seed": 3,
+   "policy": "feddrift",
+   "acc_all": 0.6249075817082571,
+   "acc_pre": 0.6376557704970989,
+   "acc_post": 0.6029137520809963,
+   "acc_adapt": 0.6036559444523169,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8678,
+   "fd_isolations_pre_t0": 5544,
+   "fd_models_final": 19,
+   "runtime_s": 25.3
+  },
+  {
+   "seed": 4,
+   "policy": "static",
+   "acc_all": 0.5816767955366553,
+   "acc_pre": 0.6247468535291414,
+   "acc_post": 0.5073701208228242,
+   "acc_adapt": 0.5102168060082188,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.8
+  },
+  {
+   "seed": 4,
+   "policy": "periodic",
+   "acc_all": 0.5766193519970216,
+   "acc_pre": 0.6191268983396905,
+   "acc_post": 0.5032831512535993,
+   "acc_adapt": 0.5048887629304237,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.8
+  },
+  {
+   "seed": 4,
+   "policy": "oracle",
+   "acc_all": 0.5839865973813506,
+   "acc_pre": 0.6247468535291414,
+   "acc_post": 0.5136649113656337,
+   "acc_adapt": 0.500580983420717,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.3
+  },
+  {
+   "seed": 4,
+   "policy": "local_adwin",
+   "acc_all": 0.5865454697995375,
+   "acc_pre": 0.6229494618178505,
+   "acc_post": 0.5237394342548068,
+   "acc_adapt": 0.5332860989088848,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 222,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.2
+  },
+  {
+   "seed": 4,
+   "policy": "fdc",
+   "acc_all": 0.5845555270071155,
+   "acc_pre": 0.6353531212079797,
+   "acc_post": 0.49691691019384526,
+   "acc_adapt": 0.5219781776959048,
+   "retrains": 18,
+   "retrains_pre_t0": 11,
+   "retrains_during_outage": 5,
+   "node_retrains": 0,
+   "releases_per_node": 180.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 6.5
+  },
+  {
+   "seed": 4,
+   "policy": "fdc_filter",
+   "acc_all": 0.5765039929945623,
+   "acc_pre": 0.6348395807190396,
+   "acc_post": 0.47586044285030404,
+   "acc_adapt": 0.48026073402295594,
+   "retrains": 17,
+   "retrains_pre_t0": 10,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 170.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 6.2
+  },
+  {
+   "seed": 4,
+   "policy": "feddrift",
+   "acc_all": 0.6234498634044539,
+   "acc_pre": 0.637784155619334,
+   "acc_post": 0.5987196067363547,
+   "acc_adapt": 0.5915828255632705,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8705,
+   "fd_isolations_pre_t0": 5528,
+   "fd_models_final": 18,
+   "runtime_s": 25.8
+  },
+  {
+   "seed": 5,
+   "policy": "static",
+   "acc_all": 0.581878673790959,
+   "acc_pre": 0.6252396867403017,
+   "acc_post": 0.5070700286516573,
+   "acc_adapt": 0.5099617401161967,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.8
+  },
+  {
+   "seed": 5,
+   "policy": "periodic",
+   "acc_all": 0.5772957752387144,
+   "acc_pre": 0.6220921805177648,
+   "acc_post": 0.5000107175775417,
+   "acc_adapt": 0.49655661045770155,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 1,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.0
+  },
+  {
+   "seed": 5,
+   "policy": "oracle",
+   "acc_all": 0.5879848355347677,
+   "acc_pre": 0.6252396867403017,
+   "acc_post": 0.5237108540480291,
+   "acc_adapt": 0.5184639365169336,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.0
+  },
+  {
+   "seed": 5,
+   "policy": "local_adwin",
+   "acc_all": 0.5902343360827229,
+   "acc_pre": 0.628080725251697,
+   "acc_post": 0.5249398029394743,
+   "acc_adapt": 0.5338245713475981,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 234,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.6
+  },
+  {
+   "seed": 5,
+   "policy": "fdc",
+   "acc_all": 0.5867001557346533,
+   "acc_pre": 0.6348354392634835,
+   "acc_post": 0.5036546939417107,
+   "acc_adapt": 0.49530962165226017,
+   "retrains": 16,
+   "retrains_pre_t0": 9,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 160.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.5
+  },
+  {
+   "seed": 5,
+   "policy": "fdc_filter",
+   "acc_all": 0.5834386421196692,
+   "acc_pre": 0.6346076592079052,
+   "acc_post": 0.4951592274770108,
+   "acc_adapt": 0.49431769873884085,
+   "retrains": 16,
+   "retrains_pre_t0": 9,
+   "retrains_during_outage": 1,
+   "node_retrains": 0,
+   "releases_per_node": 160.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.6
+  },
+  {
+   "seed": 5,
+   "policy": "feddrift",
+   "acc_all": 0.6240817161224693,
+   "acc_pre": 0.6373907173415169,
+   "acc_post": 0.6011203441056896,
+   "acc_adapt": 0.6010202635680885,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8723,
+   "fd_isolations_pre_t0": 5539,
+   "fd_models_final": 19,
+   "runtime_s": 25.8
+  },
+  {
+   "seed": 6,
+   "policy": "static",
+   "acc_all": 0.5811681672076304,
+   "acc_pre": 0.6242167472179773,
+   "acc_post": 0.5068985474109905,
+   "acc_adapt": 0.5099617401161967,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.8
+  },
+  {
+   "seed": 6,
+   "policy": "periodic",
+   "acc_all": 0.577232852146464,
+   "acc_pre": 0.6219679368510856,
+   "acc_post": 0.5000535878877084,
+   "acc_adapt": 0.49661329176703983,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.7
+  },
+  {
+   "seed": 6,
+   "policy": "oracle",
+   "acc_all": 0.5868994121934465,
+   "acc_pre": 0.6242167472179773,
+   "acc_post": 0.5225176304150561,
+   "acc_adapt": 0.5184639365169336,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.1
+  },
+  {
+   "seed": 6,
+   "policy": "local_adwin",
+   "acc_all": 0.5936715099969063,
+   "acc_pre": 0.6294888201407267,
+   "acc_post": 0.5318776481347842,
+   "acc_adapt": 0.5324925605781493,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 238,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.7
+  },
+  {
+   "seed": 6,
+   "policy": "fdc",
+   "acc_all": 0.5786695960861836,
+   "acc_pre": 0.6278280964627828,
+   "acc_post": 0.4938588280686211,
+   "acc_adapt": 0.4881961173303103,
+   "retrains": 20,
+   "retrains_pre_t0": 12,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 200.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 6.5
+  },
+  {
+   "seed": 6,
+   "policy": "fdc_filter",
+   "acc_all": 0.5743305245164099,
+   "acc_pre": 0.6251195845291786,
+   "acc_post": 0.4867066313224776,
+   "acc_adapt": 0.4841717443672949,
+   "retrains": 16,
+   "retrains_pre_t0": 9,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 160.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.5
+  },
+  {
+   "seed": 6,
+   "policy": "feddrift",
+   "acc_all": 0.6255735177679081,
+   "acc_pre": 0.6384757786971809,
+   "acc_post": 0.6033138749758854,
+   "acc_adapt": 0.5941901657928298,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8721,
+   "fd_isolations_pre_t0": 5534,
+   "fd_models_final": 17,
+   "runtime_s": 25.8
+  },
+  {
+   "seed": 7,
+   "policy": "static",
+   "acc_all": 0.5813071223696836,
+   "acc_pre": 0.6250740285180629,
+   "acc_post": 0.5057982094500454,
+   "acc_adapt": 0.5067592461385858,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.9
+  },
+  {
+   "seed": 7,
+   "policy": "periodic",
+   "acc_all": 0.5800407951381424,
+   "acc_pre": 0.6212638894065708,
+   "acc_post": 0.5089205970405196,
+   "acc_adapt": 0.5087997732747627,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.5
+  },
+  {
+   "seed": 7,
+   "policy": "oracle",
+   "acc_all": 0.5886140664572725,
+   "acc_pre": 0.6250740285180629,
+   "acc_post": 0.5257114685224747,
+   "acc_adapt": 0.5293184072552076,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.1
+  },
+  {
+   "seed": 7,
+   "policy": "local_adwin",
+   "acc_all": 0.5924733494486364,
+   "acc_pre": 0.6271696050293837,
+   "acc_post": 0.5326135884593125,
+   "acc_adapt": 0.5341646592036277,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 249,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.4
+  },
+  {
+   "seed": 7,
+   "policy": "fdc",
+   "acc_all": 0.5831764625686255,
+   "acc_pre": 0.6300479166407825,
+   "acc_post": 0.5023114242231542,
+   "acc_adapt": 0.4887912710783619,
+   "retrains": 16,
+   "retrains_pre_t0": 9,
+   "retrains_during_outage": 1,
+   "node_retrains": 0,
+   "releases_per_node": 160.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.7
+  },
+  {
+   "seed": 7,
+   "policy": "fdc_filter",
+   "acc_all": 0.584930443765108,
+   "acc_pre": 0.6311992412853421,
+   "acc_post": 0.5051051394356838,
+   "acc_adapt": 0.501034433895423,
+   "retrains": 14,
+   "retrains_pre_t0": 7,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 140.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.4
+  },
+  {
+   "seed": 7,
+   "policy": "feddrift",
+   "acc_all": 0.623090677419524,
+   "acc_pre": 0.6348188734412596,
+   "acc_post": 0.6028565916674408,
+   "acc_adapt": 0.5918378914552926,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8792,
+   "fd_isolations_pre_t0": 5574,
+   "fd_models_final": 22,
+   "runtime_s": 25.1
+  },
+  {
+   "seed": 8,
+   "policy": "static",
+   "acc_all": 0.5801194490034556,
+   "acc_pre": 0.6225394577178095,
+   "acc_post": 0.5069342726694628,
+   "acc_adapt": 0.5099617401161967,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.6
+  },
+  {
+   "seed": 8,
+   "policy": "periodic",
+   "acc_all": 0.5761631595782055,
+   "acc_pre": 0.6197688239508657,
+   "acc_post": 0.5009324292461256,
+   "acc_adapt": 0.49655661045770155,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.3
+  },
+  {
+   "seed": 8,
+   "policy": "oracle",
+   "acc_all": 0.5880503804225286,
+   "acc_pre": 0.6225394577178095,
+   "acc_post": 0.528548054045171,
+   "acc_adapt": 0.5184639365169336,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.9
+  },
+  {
+   "seed": 8,
+   "policy": "local_adwin",
+   "acc_all": 0.5874526110461489,
+   "acc_pre": 0.6223033947511192,
+   "acc_post": 0.5273262502054202,
+   "acc_adapt": 0.5256908034575599,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 247,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.4
+  },
+  {
+   "seed": 8,
+   "policy": "fdc",
+   "acc_all": 0.573402408905715,
+   "acc_pre": 0.6218561175510745,
+   "acc_post": 0.4898075837578685,
+   "acc_adapt": 0.46232109961740114,
+   "retrains": 17,
+   "retrains_pre_t0": 10,
+   "retrains_during_outage": 2,
+   "node_retrains": 0,
+   "releases_per_node": 170.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.8
+  },
+  {
+   "seed": 8,
+   "policy": "fdc_filter",
+   "acc_all": 0.5657520096062587,
+   "acc_pre": 0.6170354632839258,
+   "acc_post": 0.4772751630858049,
+   "acc_adapt": 0.47207028482357943,
+   "retrains": 14,
+   "retrains_pre_t0": 7,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 140.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.3
+  },
+  {
+   "seed": 8,
+   "policy": "feddrift",
+   "acc_all": 0.6240004404616457,
+   "acc_pre": 0.636413333830308,
+   "acc_post": 0.6025850797030516,
+   "acc_adapt": 0.60161541731614,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8662,
+   "fd_isolations_pre_t0": 5525,
+   "fd_models_final": 15,
+   "runtime_s": 20.4
+  },
+  {
+   "seed": 9,
+   "policy": "static",
+   "acc_all": 0.5810528082051712,
+   "acc_pre": 0.6240345231735146,
+   "acc_post": 0.5068985474109905,
+   "acc_adapt": 0.5099617401161967,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 2.6
+  },
+  {
+   "seed": 9,
+   "policy": "periodic",
+   "acc_all": 0.5778830574330525,
+   "acc_pre": 0.6236866409068131,
+   "acc_post": 0.4988603642547354,
+   "acc_adapt": 0.4917103585092816,
+   "retrains": 10,
+   "retrains_pre_t0": 6,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 100.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.4
+  },
+  {
+   "seed": 9,
+   "policy": "oracle",
+   "acc_all": 0.5867840531909874,
+   "acc_pre": 0.6240345231735146,
+   "acc_post": 0.5225176304150561,
+   "acc_adapt": 0.5184639365169336,
+   "retrains": 1,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 10.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 3.2
+  },
+  {
+   "seed": 9,
+   "policy": "local_adwin",
+   "acc_all": 0.593202208600538,
+   "acc_pre": 0.6291367964184692,
+   "acc_post": 0.5312060132755061,
+   "acc_adapt": 0.5327476264701715,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 245,
+   "releases_per_node": 0.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 4.2
+  },
+  {
+   "seed": 9,
+   "policy": "fdc",
+   "acc_all": 0.5792909616221573,
+   "acc_pre": 0.6258401977959174,
+   "acc_post": 0.498981830133541,
+   "acc_adapt": 0.48694912852486893,
+   "retrains": 16,
+   "retrains_pre_t0": 10,
+   "retrains_during_outage": 1,
+   "node_retrains": 0,
+   "releases_per_node": 160.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.5
+  },
+  {
+   "seed": 9,
+   "policy": "fdc_filter",
+   "acc_all": 0.578659108904142,
+   "acc_pre": 0.6291492207851371,
+   "acc_post": 0.49155097637131406,
+   "acc_adapt": 0.48473855746067734,
+   "retrains": 15,
+   "retrains_pre_t0": 7,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 150.0,
+   "t0": 402,
+   "Bw": 60,
+   "runtime_s": 5.5
+  },
+  {
+   "seed": 9,
+   "policy": "feddrift",
+   "acc_all": 0.6254057228552402,
+   "acc_pre": 0.6370221277970356,
+   "acc_post": 0.6053645048121923,
+   "acc_adapt": 0.5994048462519485,
+   "retrains": 0,
+   "retrains_pre_t0": 0,
+   "retrains_during_outage": 0,
+   "node_retrains": 0,
+   "releases_per_node": 540.0,
+   "t0": 402,
+   "Bw": 60,
+   "fd_isolations": 8665,
+   "fd_isolations_pre_t0": 5512,
+   "fd_models_final": 19,
+   "runtime_s": 25.1
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+# Public datasets are downloaded by data/fetch_data.py, never committed
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Run logs (progress output only; results are in results/**/*.json)
+results/*.log
+
+# LaTeX build files (make paper rebuilds them)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/main.pdf
+
+# Outputs of the legacy scripts when re-run in place
+exps/legacy/results/
+exps/legacy/figs/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/

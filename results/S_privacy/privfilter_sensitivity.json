@@ -1,0 +1,4 @@
+{
+ "l2_sensitivity": 0.0006244997998398398,
+ "note": "private_sd = noise multiplier x l2_sensitivity of (sum_new Y, sum_old Y, sum Z*Y) per record in [0,1]^C with Z clipped to [0, zmax]"
+}

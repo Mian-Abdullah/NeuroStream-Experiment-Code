@@ -1,0 +1,88 @@
+\section{Proofs}\label{app:proofs}
+\noindent Throughout, $A=\sum_i\alpha_i$, $Q=\sum_i\alpha_i^2$, $\Keff=A^2/Q$, $S=\sum_i\alpha_id_i$ and $v=S/A$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:keff}]
+Under A\ref{as:null}--A\ref{as:weights} the terms $\alpha_id_i\in[0,\alpha_i]$ are conditionally independent and $E[S]\le pA$. Hoeffding's inequality~\cite{hoeffding1963} gives $P(S-E[S]\ge t)\le\exp(-2t^2/Q)$ for $t>0$. The event $\{S\ge\theta A\}$ implies $S-E[S]\ge(\theta-p)A$. With $t=(\theta-p)A$ we get $\exp(-2(\theta-p)^2A^2/Q)=\exp(-2\Keff(\theta-p)^2)$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:limit}]
+Condition on the cause $Z$. Let $G$ be the affected group and $S_G=\sum_{i\in G}\alpha_id_i\le S$. Given $Z$, $E[S_G]\ge q\gamma A$. The event $\{S<\theta A\}$ implies $S_G-E[S_G]<-(\gamma q-\theta)A$, whose probability is at most $\exp(-2(\gamma q-\theta)^2A^2/\sum_{G}\alpha_i^2)\le\exp(-2\Keff(\gamma q-\theta)^2)$ by Hoeffding, since $\sum_G\alpha_i^2\le Q$. Hence $P(S\ge\theta A\mid Z)\ge1-\exp(-2\Keff(\gamma q-\theta)^2)$; multiplying by $P(Z)=\pi$ gives the claim.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:byz}]
+Write $S=S_H+S_B$ with $S_B\le\beta_wA$. Then $\{S\ge\theta A\}\subseteq\{S_H\ge(\theta-\beta_w)A\}$, while $E[S_H]\le pA_H$ with $A_H=(1-\beta_w)A$. Hoeffding over the honest nodes, with deviation $A(\theta-\beta_w-p(1-\beta_w))>0$, gives $\exp(-2A^2(\theta-\beta_w-p(1-\beta_w))^2/Q_H)$. Using $A^2=A_H^2/(1-\beta_w)^2$ and $\Keff^H=A_H^2/Q_H$ gives the stated form.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:arl}]
+Fix $\lambda\ge0$. Under A\ref{as:null}--A\ref{as:weights} in epoch $t$, $v_t=\sum_i(\alpha_i/A)d_i$ is a sum of conditionally independent terms in $[0,\alpha_i/A]$ with $E[v_t\mid\mathcal F_{t-1}]\le p$. By Hoeffding's lemma, $E[\exp(\lambda(v_t-E[v_t\mid\mathcal F_{t-1}]))\mid\mathcal F_{t-1}]\le\exp(\lambda^2\sum_i\alpha_i^2/(8A^2))=\exp(\lambda^2/(8\Keff))$. Since $\lambda\ge0$ and $E[v_t\mid\mathcal F_{t-1}]\le p$, $E[\exp(\lambda(v_t-p)-\lambda^2/(8\Keff))\mid\mathcal F_{t-1}]\le1$, and the same holds for the average over $\lambda\in\Lambda$. So $E[e_t\mid\mathcal F_{t-1}]\le1$. With $R_0=0$, $E[R_t\mid\mathcal F_{t-1}]=(1+R_{t-1})E[e_t\mid\mathcal F_{t-1}]\le1+R_{t-1}$, so $M_t=R_t-t$ is a supermartingale with $M_0=0$. For the bounded stopping time $\tau_c\wedge n$, optional stopping gives $E[R_{\tau_c\wedge n}]\le E[\tau_c\wedge n]$. If $E[\tau_c]=\infty$ there is nothing to prove. Otherwise $\tau_c<\infty$ a.s. and $R_{\tau_c}\ge c$, and Fatou's lemma gives $c\le E[R_{\tau_c}]\le\liminf_nE[R_{\tau_c\wedge n}]\le\liminf_nE[\tau_c\wedge n]=E[\tau_c]$. After a reset the argument applies conditionally on the past, so each inter-declaration time has conditional expectation at least $c$.
+\end{proof}
+
+\begin{corollary}[threshold rule over time]\label{cor:arl-thr}
+If A\ref{as:null}--A\ref{as:weights} hold in every disjoint epoch, the rule ``declare when $v_t\ge\theta$'' has conditional per-epoch false-alarm probability at most $q=\exp(-2\Keff(\theta-p)^2)$. The first false declaration $\tau$ therefore satisfies $P(\tau>t)\ge(1-q)^t$ and $E[\tau]\ge1/q$, and $P(\text{any false declaration in }T\text{ epochs})\le Tq$.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:keff} holds conditionally on $\mathcal F_{t-1}$. Hence $P(\tau>t)=E[\prod_{s\le t}(1-P(v_s\ge\theta\mid\mathcal F_{s-1}))]\ge(1-q)^t$, and $E[\tau]=\sum_{t\ge0}P(\tau>t)\ge1/q$. The last claim is a union bound.
+\end{proof}
+
+\begin{proposition}[filtered votes]\label{prop:filtered}
+Suppose A\ref{as:adjust} holds with the true within-window slope. Then, absent drift, each node's adjusted statistic is a function of its own observation noise only and its distribution does not depend on $Z$. The filtered votes are therefore conditionally independent given $Z$, with a mean alarm probability $\tilde p$ that does not depend on $Z$, and Theorems~\ref{thm:keff} and~\ref{thm:arl} hold for $\tilde v$ with $p$ replaced by $\tilde p$. With an estimated slope, $\tilde p$ also absorbs the estimation error; we calibrate it on validation runs (Track S: \SpFil{} for filtered vs.\ \SpRaw{} for raw alarms per window).
+\end{proposition}
+\begin{proof}[Proof sketch]
+Under A\ref{as:adjust}, $y=\mu+\beta z+\eta$ within the window, with node-specific noise $\eta$ independent across nodes given $Z$. The adjusted difference with the true $\beta$ equals the difference of window means of $\eta$, which involves neither $z$ nor $Z$. Independence across nodes then follows from that of $\eta$.
+\end{proof}
+
+\section{Additional Results}\label{app:more}
+This appendix gives the full results summarised in Section~\ref{sec:results}: robust aggregation under adaptive attacks (Table~\ref{tab:byz}), the Track S sweeps and weighting schemes (Tables~\ref{tab:sweeps} and~\ref{tab:weights}), the private training horizon and node-level gating (Tables~\ref{tab:horizon} and~\ref{tab:gating}), and the utility of differentially private training (Table~\ref{tab:dputil}).
+
+\begin{table*}[!t]\centering\small
+\caption{Robust aggregation on Covertype ($K=50$, IID partition, 40 rounds, omniscient attackers, 10 seeds): test accuracy without attack and under each attack with 20\% and 30\% Byzantine nodes.}\label{tab:byz}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccc@{}}\toprule
+aggregator & no attack & \multicolumn{2}{c}{sign-flip $\times3$} & \multicolumn{2}{c}{ALIE} & \multicolumn{2}{c}{IPM ($\epsilon=0.5$)} & \multicolumn{2}{c}{min-max}\\\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}
+& & 20\% & 30\% & 20\% & 30\% & 20\% & 30\% & 20\% & 30\%\\\midrule
+\inputtable{tables/tab_byz.tex}
+\bottomrule\end{tabular*}\end{table*}
+
+\begin{table}[!tbp]\centering\scriptsize\setlength{\tabcolsep}{2pt}
+\caption{Track S sweeps (100 seeds, $\theta=0.35$): false retrains / 1,000 blocks and attributable detection.}\label{tab:sweeps}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lcccc@{}}\toprule
+& \multicolumn{2}{c}{FDC} & \multicolumn{2}{c}{FDC + filter}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+setting & false & detect & false & detect\\\midrule
+\inputtable{tables/tab_sim_sweeps.tex}
+\bottomrule\end{tabular}}\end{table}
+
+\begin{table}[!tbp]\centering\scriptsize\setlength{\tabcolsep}{2pt}
+\caption{Track S, weighting schemes (200 seeds, $\theta=0.35$). ``Calibrated $\rho$'' is the share of a node's calibration-period alarms that survive covariate adjustment; it uses no ground truth.}\label{tab:weights}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lcccc@{}}\toprule
+weights & FDC false & FDC detect & filter false & filter detect\\\midrule
+\inputtable{tables/tab_sim_weights.tex}
+\bottomrule\end{tabular}}\end{table}
+
+\begin{table}[!tbp]\centering\footnotesize\setlength{\tabcolsep}{2.5pt}
+\caption{Blocks until $\varepsilon>4$ ($\delta=10^{-5}$) per node: continuous training, periodic retraining every 100 blocks, plain FDC ($\theta=0.35$, $0.45$) and FDC + filter, each with $R=10$ DP rounds per retraining and Sparse-Vector votes ($\varepsilon_{\text{svt}}=0.2$). Retrain and vote rates measured in Track S.}\label{tab:horizon}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}rrrrrrrr@{}}\toprule
+$\sigma$ & $R$ & drifts/1k & cont. & periodic & FDC .35 & FDC .45 & filter\\\midrule
+\inputtable{tables/tab_horizon.tex}
+\bottomrule\end{tabular*}\end{table}
+
+\begin{table}[!tbp]\centering\footnotesize\setlength{\tabcolsep}{2.5pt}
+\caption{Node-level drift gating with the gate charged ($\sigma=25$; horizon without gating = \GateHorNoGate{} rounds). $R$ = releases authorised per positive Sparse-Vector answer. The earlier draft's analysis implicitly fixed $R=1$ and used the active-block fraction as the release fraction.}\label{tab:gating}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}rrrrrrr@{}}\toprule
+$\varepsilon_{\text{svt}}$ & $c_{\text{svt}}$ & $R$ & active frac. & positives/1k & horizon & gain\\\midrule
+\inputtable{tables/tab_gating.tex}
+\bottomrule\end{tabular*}\end{table}
+
+\begin{table}[!tbp]\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\caption{Test accuracy of federated softmax regression: non-private (no clipping), clipping only ($C=1$), and DP with noise multiplier $\sigma$ (one full-batch step per round, 60 rounds, no subsampling; learning rate for clipped runs chosen on a validation seed: \DpLrCov{} for Covertype; 10 seeds). With one local step and weighted averaging, non-private FedAvg equals full-batch gradient descent and does not depend on the partition seed. Last row: record-level $\varepsilon$ per node at $\delta=10^{-5}$.}\label{tab:dputil}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccccc@{}}\toprule
+& non-private & clip only & $\sigma=1$ & 10 & 25\\\midrule
+\inputtable{tables/tab_dputil.tex}
+\bottomrule\end{tabular*}\end{table}
+
+\section{Experimental Details and Reproducibility}\label{app:repro}
+\noindent\textbf{Track S generator.} $K=50$; $C=3$ channels; block means of 5,000 records with per-record s.d.\ 0.25; node offsets $\mathcal N(0,0.05^2)$. Local faults: rate 0.001 per node-block, duration 20, shift 0.03 on one channel. Outages: start rate 0.004 per block on a fixed half of the nodes, each hit with probability 0.9, duration 20, shift 0.03 on channel 2. Covariate: $z=1-0.5\cdot\text{outage}+\mathcal N(0,0.03^2)$, clipped to $[0,1.5]$. Drift: shift 0.03 on channel 1 of half the nodes from block 600. Detector: $M_B=10$, $\delta'=0.002$, $\epsilon_{\text{cut}}=0.0087$, $W=10$. Weights: data volume $\sim\mathrm{LogNormal}(0,0.5)$. Separate random streams per event type (\texttt{numpy.random.SeedSequence.spawn}). Seeds: test 0--199, validation 1000--1099 (tuning), calibration of $p$ for the e-detector on seeds 1000--1029, long-horizon runs 5000--5009. E-detector: $\Lambda=\{5,10,20,40,80\}$; $p$ = calibrated weighted epoch-alarm rate + 0.02.
+
+\noindent\textbf{Track A.} Rows in original order are split into 600 blocks (Elec2: 150). The first 10\% of blocks are warm-up: 30 FedAvg rounds of softmax regression (5 local gradient steps, learning rate 0.5); features are standardised using warm-up statistics only. Outages: start rate 0.01 per block after warm-up on a fixed half of the nodes, hit probability 0.9, duration 10 blocks, offset $+3$ on a fixed random half of the standardised features. The covariate is synthetic: $z=1-0.5\cdot\text{outage}+\mathcal N(0,0.03^2)$. Injected drift at block $0.67B$ on half the nodes: classes 0 and 1 are swapped for records whose drift feature (Elec2 \emph{period}, Covertype \emph{Elevation}, Airlines \emph{Time}) is above its warm-up median. Detector: one-sided two-window test on pooled error rates with the ADWIN harmonic-mean cut. Closed loop: federation-wide drift ($\gamma=1$); a retraining runs 10 FedAvg rounds on each node's last 10 blocks; refractory period 10 blocks; periodic $P=50$; local ADWIN ($\delta=0.002$) retrains a node's own model.
+
+\noindent\textbf{Reproducibility checklist.} Code, configurations and seeds: \texttt{ns/}, \texttt{exps/}. Per-seed logs, configuration hashes and library versions: \texttt{results/**/*.json}. Repository: \RepoURL{} (archived release: \ZenodoDOI). Data: the public files listed in Table~\ref{tab:data}, downloaded and SHA-256-checked by \texttt{python data/fetch\_data.py} (sources and commits in \texttt{data/PROVENANCE.md}); no data were synthesised or extended, and injected events are generated by the documented code. Compute: 2 vCPU, no GPU; the logged wall-clock runtimes of all experiments sum to \RuntimeHours{} hours (each result file records its runtime). Libraries: Python 3.13.18, NumPy 2.5.3, SciPy 1.18.1, pandas 3.0.5, River 0.27.0, dp-accounting 0.7.0, matplotlib 3.11.2. Every number in the paper is emitted by \texttt{exps/f\_numbers.py} into \texttt{paper/numbers.tex}. Superseded runs are kept in \texttt{results/} and listed in the repository README; none is used in this paper.
