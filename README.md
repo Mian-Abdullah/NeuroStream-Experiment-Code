@@ -108,7 +108,7 @@ paper/         LaTeX source; numbers.tex and tables/ are generated from results/
 docs/          CLAIMS_TABLE.md (every number -> result file -> producing script), CODE_GUIDE.md (this code explained)
 ```
 
-New to the code? Read **[docs/CODE_GUIDE.md](docs/CODE_GUIDE.md)** for a walkthrough of every module.
+New to the code? Read **[docs/CODE_GUIDE.md](CODE_GUIDE.md)** for a walkthrough of every module.
 
 ## What each command regenerates
 
